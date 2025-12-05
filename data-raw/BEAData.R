@@ -110,9 +110,17 @@ for (dataname in c("GVA", "Tax", "Compensation", "GOS")) {
 
 #' Get BEA state PCE (personal consumption expenditures) data for a specified year.
 #' @param year A numeric value specifying year of interest.
+#' @param SAPCE_level A numeric value specifying SAPCE level of interest, default 1 (most aggregate)
 #' @return A data frame of BEA state PCE data for the specified year.
 #' available.
-getBEAStatePCE <- function(year) {
+getBEAStatePCE <- function(year, SAPCE_level = 1) {
+  
+  # Check that SAPCE_level is between 1 and 4 otherwise set as 1
+  if(SAPCE_level > 4 | SAPCE_level <1){
+    print("Inadmissible SAPCE level, setting to 1.")
+    SAPCE_level <- 1
+  }
+  
   # Create the placeholder file
   StatePCEzip <- file.path(stateio_dir, "SAPCE.zip")
   dir <- file.path(stateio_dir, "SAPCE")
@@ -127,7 +135,7 @@ getBEAStatePCE <- function(year) {
     unzip(StatePCEzip, files = fname, exdir = dir, overwrite = TRUE)
   }
   # Define FileName and FullFileName
-  FileName <- list.files(dir, pattern = "SAPCE1__ALL_AREAS")
+  FileName <- list.files(dir, pattern = paste0("SAPCE", SAPCE_level, "__ALL_AREAS"))
   FullFileName <- file.path(dir, FileName)
   # Get date_accessed
   date_accessed <- as.character(as.Date(file.mtime(StatePCEzip)))
@@ -150,6 +158,14 @@ getBEAStatePCE <- function(year) {
     StatePCE[is.na(StatePCE)] <- 0
     # Convert values to current US $
     year_col <- as.character(year)
+    
+    if(!is.numeric(StatePCE[,year_col])){
+      # Need to convert to numeric if values are in as character strings
+      StatePCE[,year_col] <- as.numeric(StatePCE[,year_col])
+      StatePCE[which(is.na(StatePCE[,year_col])),year_col] <- 0 # replace NAs with 0
+    }
+    
+    
     StatePCE[, year_col] <- StatePCE[, year_col]*1E6
     # Keep state-level data
     geo_names <- c(state.name, "District of Columbia", "United States")
