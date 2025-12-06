@@ -1,299 +1,299 @@
-"","CommodityCode","LineCode","PCECategory","CommodityDescription","ProducersValue","Transportation Costs","Wholesale","Retail","PurchasersValue","Year","ProducersValuebyCommodityCode","Mapping_ratio"
-"1","111CA","27","Food and nonalcoholic beverages purchased for off-premises consumption","Farms",55659,"6470","15192","30536","107857","2017",75520,0.737010063559322
-"2","111CA","29","Food produced and consumed on farms","Farms",433,"0","0","0","433","2017",75520,0.00573358050847458
-"3","111CA","41","Recreational items","Farms",18570,"2028","4325","18766","43690","2017",75520,0.245895127118644
-"4","111CA","84","Food furnished to employees (including military)","Farms",858,"101","226","0","1185","2017",75520,0.0113612288135593
-"5","113FF","27","Food and nonalcoholic beverages purchased for off-premises consumption","Forestry, fishing, and related activities",3293,"324","360","1533","5511","2017",6572,0.501065124771759
-"6","113FF","77","Membership clubs, sports centers, parks, theaters, and museums","Forestry, fishing, and related activities",3011,"0","0","0","3011","2017",6572,0.45815581253804
-"7","113FF","80","Other recreational services","Forestry, fishing, and related activities",124,"0","0","0","124","2017",6572,0.0188679245283019
-"8","113FF","84","Food furnished to employees (including military)","Forestry, fishing, and related activities",144,"14","16","0","174","2017",6572,0.021911138161899
-"9","212","27","Food and nonalcoholic beverages purchased for off-premises consumption","Mining, except oil and gas",7,"2","0","4","13","2017",173,0.0404624277456647
-"10","212","38","Fuel oil and other fuels","Mining, except oil and gas",121,"45","3","52","221","2017",173,0.699421965317919
-"11","212","41","Recreational items","Mining, except oil and gas",14,"6","2","14","36","2017",173,0.0809248554913295
-"12","212","42","Household supplies","Mining, except oil and gas",31,"13","1","20","65","2017",173,0.179190751445087
-"13","22","56","Water supply and sanitation","Utilities",39512,"0","0","0","39512","2017",265417,0.148867630935471
-"14","22","58","Electricity","Utilities",177661,"0","0","0","177661","2017",265417,0.669365564376057
-"15","22","59","Natural Gas","Utilities",48244,"0","0","0","48244","2017",265417,0.181766804688471
-"16","311FT","27","Food and nonalcoholic beverages purchased for off-premises consumption","Food and beverage and tobacco products",428332,"8585","73655","238847","749419","2017",584356,0.732998377701264
-"17","311FT","28","Alcoholic beverages purchased for off-premises consumption","Food and beverage and tobacco products",58973,"1584","41365","45533","147456","2017",584356,0.100919644874015
-"18","311FT","41","Recreational items","Food and beverage and tobacco products",20742,"452","5342","21417","47953","2017",584356,0.0354954856286236
-"19","311FT","44","Tobacco","Food and beverage and tobacco products",56674,"710","31459","26120","114963","2017",584356,0.0969853993113787
-"20","311FT","84","Food furnished to employees (including military)","Food and beverage and tobacco products",19635,"413","3294","0","23342","2017",584356,0.0336010924847182
-"21","313TT","9","Furniture and furnishings","Textile mills and textile product mills",8703,"416","3007","13384","25510","2017",21049,0.413463822509383
-"22","313TT","12","Tools and equipment for house and garden","Textile mills and textile product mills",27,"2","16","60","104","2017",21049,0.00128272126941897
-"23","313TT","15","Sporting equipment, supplies, guns, and ammunition","Textile mills and textile product mills",1083,"57","588","1081","2809","2017",21049,0.05145137536225
-"24","313TT","32","Womens and girls clothing","Textile mills and textile product mills",45,"2","19","76","142","2017",21049,0.00213786878236496
-"25","313TT","33","Mens and boys clothing","Textile mills and textile product mills",4,"0","1","5","10","2017",21049,0.000190032780654663
-"26","313TT","34","Childrens and infants clothing","Textile mills and textile product mills",254,"11","150","522","936","2017",21049,0.0120670815715711
-"27","313TT","35","Other clothing materials and footwear","Textile mills and textile product mills",954,"40","150","1269","2414","2017",21049,0.0453228181861371
-"28","313TT","41","Recreational items","Textile mills and textile product mills",34,"2","19","35","89","2017",21049,0.00161527863556463
-"29","313TT","42","Household supplies","Textile mills and textile product mills",9470,"552","3059","20855","33936","2017",21049,0.449902608199915
-"30","313TT","43","Personal care products","Textile mills and textile product mills",475,"20","280","495","1270","2017",21049,0.0225663927027412
-"31","315AL","9","Furniture and furnishings","Apparel and leather and allied products",136,"6","80","193","414","2017",143632,0.000946864208532917
-"32","315AL","14","Video, audio, photographic, and information processing equipment and media","Apparel and leather and allied products",15,"1","4","8","27","2017",143632,0.000104433552411719
-"33","315AL","15","Sporting equipment, supplies, guns, and ammunition","Apparel and leather and allied products",187,"8","110","187","492","2017",143632,0.00130193828673276
-"34","315AL","18","Musical instruments","Apparel and leather and allied products",189,"8","47","135","380","2017",143632,0.00131586276038766
-"35","315AL","23","Luggage and similar personal items","Apparel and leather and allied products",11319,"473","3670","10760","26223","2017",143632,0.078805558649883
-"36","315AL","32","Womens and girls clothing","Apparel and leather and allied products",56179,"2386","22711","94506","175781","2017",143632,0.391131502729197
-"37","315AL","33","Mens and boys clothing","Apparel and leather and allied products",40423,"1728","19358","48427","109936","2017",143632,0.281434499275927
-"38","315AL","34","Childrens and infants clothing","Apparel and leather and allied products",3089,"129","1244","5197","9659","2017",143632,0.0215063495599866
-"39","315AL","35","Other clothing materials and footwear","Apparel and leather and allied products",31180,"1309","17256","37678","87423","2017",143632,0.217082544279826
-"40","315AL","41","Recreational items","Apparel and leather and allied products",301,"13","177","311","802","2017",143632,0.00209563328506182
-"41","315AL","42","Household supplies","Apparel and leather and allied products",387,"16","156","870","1429","2017",143632,0.00269438565222235
-"42","315AL","43","Personal care products","Apparel and leather and allied products",227,"10","91","236","564","2017",143632,0.00158042775983068
-"43","321","9","Furniture and furnishings","Wood products",968,"67","175","1339","2549","2017",3143,0.307986000636335
-"44","321","11","Glassware, tableware and household utensils","Wood products",791,"49","137","90","1067","2017",3143,0.251670378619154
-"45","321","12","Tools and equipment for house and garden","Wood products",31,"2","5","116","154","2017",3143,0.00986318803690741
-"46","321","23","Luggage and similar personal items","Wood products",175,"7","103","249","533","2017",3143,0.0556792873051225
-"47","321","38","Fuel oil and other fuels","Wood products",578,"37","145","264","1025","2017",3143,0.183900731784919
-"48","321","42","Household supplies","Wood products",600,"39","99","693","1431","2017",3143,0.190900413617563
-"49","322","34","Childrens and infants clothing","Paper products",3447,"152","560","7093","11251","2017",22678,0.151997530646441
-"50","322","41","Recreational items","Paper products",172,"12","28","198","410","2017",22678,0.00758444307258136
-"51","322","42","Household supplies","Paper products",14663,"739","2381","16943","34727","2017",22678,0.646573771937561
-"52","322","43","Personal care products","Paper products",3654,"162","593","7467","11876","2017",22678,0.161125319693095
-"53","322","45","Magazines, newspapers, and stationery","Paper products",742,"31","121","557","1450","2017",22678,0.0327189346503219
-"54","323","9","Furniture and furnishings","Printing and related support activities",219,"9","36","311","575","2017",2803,0.0781305743845879
-"55","323","17","Recreational books","Printing and related support activities",22,"1","4","8","35","2017",2803,0.00784873349982162
-"56","323","41","Recreational items","Printing and related support activities",331,"14","54","502","900","2017",2803,0.118087763110953
-"57","323","42","Household supplies","Printing and related support activities",1836,"77","298","4018","6229","2017",2803,0.655012486621477
-"58","323","45","Magazines, newspapers, and stationery","Printing and related support activities",389,"16","56","292","754","2017",2803,0.138779878701391
-"59","323","104","Professional and other services","Printing and related support activities",6,"0","1","0","7","2017",2803,0.00214056368176953
-"60","324","37","Motor vehicle fuels, lubricants, and fluids","Petroleum and coal products",165405,"7912","61511","67584","302413","2017",176321,0.93809018778251
-"61","324","38","Fuel oil and other fuels","Petroleum and coal products",10274,"650","2031","6758","19713","2017",176321,0.0582687257898946
-"62","324","40","Pharmaceutical and other medical products","Petroleum and coal products",642,"30","65","1322","2059","2017",176321,0.00364108642759512
-"63","325","7","Motor vehicles parts and accessories","Chemical products",177,"4","22","113","315","2017",255660,0.000692325745130251
-"64","325","12","Tools and equipment for house and garden","Chemical products",2716,"73","546","2127","5463","2017",255660,0.010623484315106
-"65","325","15","Sporting equipment, supplies, guns, and ammunition","Chemical products",1183,"33","188","1181","2585","2017",255660,0.00462723930219823
-"66","325","27","Food and nonalcoholic beverages purchased for off-premises consumption","Chemical products",556,"18","70","310","954","2017",255660,0.00217476335758429
-"67","325","37","Motor vehicle fuels, lubricants, and fluids","Chemical products",50,"1","6","32","89","2017",255660,0.000195572244387077
-"68","325","38","Fuel oil and other fuels","Chemical products",323,"12","41","148","524","2017",255660,0.00126339669874051
-"69","325","40","Pharmaceutical and other medical products","Chemical products",196683,"3645","75953","156757","433038","2017",255660,0.769314714855668
-"70","325","41","Recreational items","Chemical products",851,"20","464","754","2089","2017",255660,0.00332863959946804
-"71","325","42","Household supplies","Chemical products",13884,"290","2260","9036","25469","2017",255660,0.0543065008214034
-"72","325","43","Personal care products","Chemical products",37607,"756","4739","38240","81341","2017",255660,0.147097707893296
-"73","325","45","Magazines, newspapers, and stationery","Chemical products",1630,"46","207","1223","3105","2017",255660,0.0063756551670187
-"74","326","7","Motor vehicles parts and accessories","Plastics and rubber products",13930,"310","4619","17119","35978","2017",35009,0.397897683452826
-"75","326","9","Furniture and furnishings","Plastics and rubber products",382,"8","163","496","1049","2017",35009,0.0109114799051672
-"76","326","10","Household appliances","Plastics and rubber products",39,"1","17","63","120","2017",35009,0.00111399925733383
-"77","326","11","Glassware, tableware and household utensils","Plastics and rubber products",14100,"287","2570","1606","18563","2017",35009,0.402753577651461
-"78","326","12","Tools and equipment for house and garden","Plastics and rubber products",149,"3","38","335","525","2017",35009,0.00425604844468565
-"79","326","16","Sports and recreational vehicles","Plastics and rubber products",981,"22","326","1172","2501","2017",35009,0.028021365934474
-"80","326","40","Pharmaceutical and other medical products","Plastics and rubber products",147,"3","87","331","568","2017",35009,0.00419892027764289
-"81","326","41","Recreational items","Plastics and rubber products",1454,"30","258","1578","3320","2017",35009,0.0415321774400868
-"82","326","42","Household supplies","Plastics and rubber products",3028,"59","578","3745","7410","2017",35009,0.0864920449027393
-"83","326","43","Personal care products","Plastics and rubber products",622,"13","240","977","1852","2017",35009,0.0177668599502985
-"84","326","45","Magazines, newspapers, and stationery","Plastics and rubber products",177,"4","46","133","360","2017",35009,0.0050558427832843
-"85","327","7","Motor vehicles parts and accessories","Nonmetallic mineral products",109,"15","17","136","277","2017",11570,0.0094209161624892
-"86","327","9","Furniture and furnishings","Nonmetallic mineral products",1353,"184","402","937","2876","2017",11570,0.116940363007779
-"87","327","11","Glassware, tableware and household utensils","Nonmetallic mineral products",6711,"935","2084","2853","12583","2017",11570,0.580034572169404
-"88","327","12","Tools and equipment for house and garden","Nonmetallic mineral products",228,"39","50","145","462","2017",11570,0.0197061365600691
-"89","327","104","Professional and other services","Nonmetallic mineral products",3169,"428","522","982","5100","2017",11570,0.273898012100259
-"90","331","7","Motor vehicles parts and accessories","Primary metals",12,"0","1","14","28","2017",749,0.0160213618157543
-"91","331","9","Furniture and furnishings","Primary metals",110,"3","11","406","530","2017",749,0.146862483311081
-"92","331","10","Household appliances","Primary metals",53,"2","5","30","90","2017",749,0.0707610146862483
-"93","331","11","Glassware, tableware and household utensils","Primary metals",552,"16","55","63","686","2017",749,0.7369826435247
-"94","331","12","Tools and equipment for house and garden","Primary metals",14,"0","1","51","66","2017",749,0.0186915887850467
-"95","331","15","Sporting equipment, supplies, guns, and ammunition","Primary metals",8,"0","1","8","16","2017",749,0.0106809078771696
-"96","332","7","Motor vehicles parts and accessories","Fabricated metal products",653,"19","306","811","1789","2017",16629,0.0392687473690541
-"97","332","9","Furniture and furnishings","Fabricated metal products",475,"14","206","1755","2450","2017",16629,0.0285645558963257
-"98","332","11","Glassware, tableware and household utensils","Fabricated metal products",3363,"97","955","452","4867","2017",16629,0.202237055745986
-"99","332","12","Tools and equipment for house and garden","Fabricated metal products",2044,"59","992","7445","10540","2017",16629,0.122917794214926
-"100","332","15","Sporting equipment, supplies, guns, and ammunition","Fabricated metal products",7428,"212","3224","7104","17968","2017",16629,0.446689518311384
-"101","332","16","Sports and recreational vehicles","Fabricated metal products",99,"3","52","47","202","2017",16629,0.00595345480786578
-"102","332","42","Household supplies","Fabricated metal products",607,"17","157","590","1371","2017",16629,0.0365024956401467
-"103","332","43","Personal care products","Fabricated metal products",1942,"57","1018","2024","5042","2017",16629,0.116783931685609
-"104","332","104","Professional and other services","Fabricated metal products",18,"1","5","6","29","2017",16629,0.00108244632870287
-"105","333","7","Motor vehicles parts and accessories","Machinery",0,"0","0","0","0","2017",8872,0
-"106","333","10","Household appliances","Machinery",4111,"120","1828","2331","8391","2017",8872,0.463367899008115
-"107","333","12","Tools and equipment for house and garden","Machinery",3545,"103","1096","13109","17853","2017",8872,0.399571686203787
-"108","333","14","Video, audio, photographic, and information processing equipment and media","Machinery",779,"23","565","302","1669","2017",8872,0.0878043282236249
-"109","333","16","Sports and recreational vehicles","Machinery",225,"7","43","107","382","2017",8872,0.0253606853020739
-"110","333","43","Personal care products","Machinery",212,"6","40","302","561","2017",8872,0.0238954012623986
-"111","334","7","Motor vehicles parts and accessories","Computer and electronic products",6,"0","4","8","18","2017",73168,8.20030614476274e-05
-"112","334","9","Furniture and furnishings","Computer and electronic products",726,"18","223","1033","2000","2017",73168,0.00992237043516291
-"113","334","12","Tools and equipment for house and garden","Computer and electronic products",0,"0","0","1","2","2017",73168,0
-"114","334","14","Video, audio, photographic, and information processing equipment and media","Computer and electronic products",53797,"497","16593","30608","101495","2017",73168,0.735253116116335
-"115","334","20","Jewelry and watches","Computer and electronic products",3730,"47","2125","5577","11479","2017",73168,0.0509785698666084
-"116","334","21","Therapeutic appliances and equipment","Computer and electronic products",4151,"40","2094","3906","10192","2017",73168,0.0567324513448502
-"117","334","24","Telephone and facsimile equipment","Computer and electronic products",10737,"99","7185","9573","27595","2017",73168,0.146744478460529
-"118","334","80","Other recreational services","Computer and electronic products",21,"0","4","21","46","2017",73168,0.000287010715066696
-"119","335","7","Motor vehicles parts and accessories","Electrical equipment, appliances, and components",1540,"15","248","1914","3717","2017",40276,0.0382361704240739
-"120","335","9","Furniture and furnishings","Electrical equipment, appliances, and components",2021,"255","634","2890","5801","2017",40276,0.0501787665110736
-"121","335","10","Household appliances","Electrical equipment, appliances, and components",26904,"1153","9319","14288","51664","2017",40276,0.66799086304499
-"122","335","12","Tools and equipment for house and garden","Electrical equipment, appliances, and components",91,"1","28","335","455","2017",40276,0.00225941007051346
-"123","335","14","Video, audio, photographic, and information processing equipment and media","Electrical equipment, appliances, and components",1025,"10","322","870","2228","2017",40276,0.0254493991458933
-"124","335","16","Sports and recreational vehicles","Electrical equipment, appliances, and components",72,"1","11","40","124","2017",40276,0.00178766511073592
-"125","335","21","Therapeutic appliances and equipment","Electrical equipment, appliances, and components",622,"8","196","604","1430","2017",40276,0.0154434402621909
-"126","335","41","Recreational items","Electrical equipment, appliances, and components",51,"0","16","29","96","2017",40276,0.00126626278677128
-"127","335","42","Household supplies","Electrical equipment, appliances, and components",1290,"13","405","4770","6477","2017",40276,0.0320289999006853
-"128","335","43","Personal care products","Electrical equipment, appliances, and components",6660,"548","2219","2331","11757","2017",40276,0.165359022743073
-"129","3361MV","5","New motor vehicles","Motor vehicles, bodies and trailers, and parts",156591,"2756","10488","110896","280730","2017",190228,0.823175347477764
-"130","3361MV","7","Motor vehicles parts and accessories","Motor vehicles, bodies and trailers, and parts",16279,"186","2463","20229","39158","2017",190228,0.0855762558613874
-"131","3361MV","16","Sports and recreational vehicles","Motor vehicles, bodies and trailers, and parts",17358,"207","548","12152","30265","2017",190228,0.0912483966608491
-"132","3364OT","15","Sporting equipment, supplies, guns, and ammunition","Other transportation equipment",2232,"22","141","1460","3856","2017",22023,0.101348590110339
-"133","3364OT","16","Sports and recreational vehicles","Other transportation equipment",19791,"183","1838","11351","33163","2017",22023,0.898651409889661
-"134","337","9","Furniture and furnishings","Furniture and related products",46798,"5925","8831","48402","109956","2017",46867,0.998527748735784
-"135","337","12","Tools and equipment for house and garden","Furniture and related products",69,"9","23","156","258","2017",46867,0.00147225126421576
-"136","339","7","Motor vehicles parts and accessories","Miscellaneous manufacturing",99,"13","25","124","261","2017",85969,0.00115157789435727
-"137","339","9","Furniture and furnishings","Miscellaneous manufacturing",2768,"349","1075","3622","7814","2017",85969,0.0321976526422315
-"138","339","11","Glassware, tableware and household utensils","Miscellaneous manufacturing",86,"1","49","10","147","2017",85969,0.00100036059509823
-"139","339","12","Tools and equipment for house and garden","Miscellaneous manufacturing",354,"46","118","1284","1803","2017",85969,0.00411776337982296
-"140","339","14","Video, audio, photographic, and information processing equipment and media","Miscellaneous manufacturing",8,"1","1","0","11","2017",85969,9.30567995440217e-05
-"141","339","15","Sporting equipment, supplies, guns, and ammunition","Miscellaneous manufacturing",13749,"1656","6161","16498","38064","2017",85969,0.159929742116344
-"142","339","18","Musical instruments","Miscellaneous manufacturing",2344,"304","588","1668","4904","2017",85969,0.0272656422663984
-"143","339","20","Jewelry and watches","Miscellaneous manufacturing",13922,"175","7931","21106","43134","2017",85969,0.161942095406484
-"144","339","21","Therapeutic appliances and equipment","Miscellaneous manufacturing",16429,"157","5743","16641","38970","2017",85969,0.191103769963592
-"145","339","23","Luggage and similar personal items","Miscellaneous manufacturing",1037,"136","564","1177","2914","2017",85969,0.0120624876408938
-"146","339","32","Womens and girls clothing","Miscellaneous manufacturing",60,"7","27","101","195","2017",85969,0.000697925996580163
-"147","339","33","Mens and boys clothing","Miscellaneous manufacturing",45,"4","21","53","123","2017",85969,0.000523444497435122
-"148","339","35","Other clothing materials and footwear","Miscellaneous manufacturing",173,"22","29","232","457","2017",85969,0.00201235329013947
-"149","339","40","Pharmaceutical and other medical products","Miscellaneous manufacturing",1228,"12","620","2493","4353","2017",85969,0.0142842187300073
-"150","339","41","Recreational items","Miscellaneous manufacturing",22503,"2961","10459","34182","70106","2017",85969,0.26175714501739
-"151","339","42","Household supplies","Miscellaneous manufacturing",3006,"366","1595","6447","11414","2017",85969,0.0349660924286661
-"152","339","43","Personal care products","Miscellaneous manufacturing",5787,"753","2983","6032","15554","2017",85969,0.0673149623701567
-"153","339","45","Magazines, newspapers, and stationery","Miscellaneous manufacturing",2371,"309","398","1779","4857","2017",85969,0.0275797089648594
-"154","481","74","Air transportation","Air transportation",94749,"0","0","0","94749","2017",129784,0.730051470134993
-"155","481","77","Membership clubs, sports centers, parks, theaters, and museums","Air transportation",161,"0","0","0","161","2017",129784,0.00124052271466437
-"156","481","83","Purchased meals and beverages","Air transportation",1109,"0","0","0","1109","2017",129784,0.00854496702212908
-"157","481","104","Professional and other services","Air transportation",46,"0","0","0","46","2017",129784,0.000354435061332676
-"158","481","107","Household maintenance","Air transportation",22,"0","0","0","22","2017",129784,0.000169512420637367
-"159","481","109","Foreign travel by U.S. residents","Air transportation",33697,"0","0","0","33697","2017",129784,0.259639092646243
-"160","482","73","Ground transportation","Rail transportation",1307,"0","0","0","1307","2017",1459,0.895819054146676
-"161","482","83","Purchased meals and beverages","Rail transportation",152,"0","0","0","152","2017",1459,0.104180945853324
-"162","483","75","Water transportation","Water transportation",1427,"0","0","0","1427","2017",22027,0.0647841285694829
-"163","483","107","Household maintenance","Water transportation",1,"0","0","0","1","2017",22027,4.53988287102193e-05
-"164","483","109","Foreign travel by U.S. residents","Water transportation",20599,"0","0","0","20599","2017",22027,0.935170472601807
-"165","484","107","Household maintenance","Truck transportation",11700,"0","0","0","11700","2017",11700,1
-"166","485","73","Ground transportation","Transit and ground passenger transportation",47460,"0","0","0","47460","2017",47460,1
-"167","487OS","70","Motor vehicle maintenance and repair","Other transportation and support activities",7298,"0","0","0","7298","2017",17855,0.408737048445813
-"168","487OS","73","Ground transportation","Other transportation and support activities",1769,"0","0","0","1769","2017",17855,0.0990758891066928
-"169","487OS","75","Water transportation","Other transportation and support activities",2332,"0","0","0","2332","2017",17855,0.13060767292075
-"170","487OS","98","Postal and delivery services","Other transportation and support activities",6456,"0","0","0","6456","2017",17855,0.361579389526743
-"171","493","107","Household maintenance","Warehousing and storage",251,"0","0","0","251","2017",251,1
-"172","4A0","104","Professional and other services","Other retail",5974,"0","0","0","5974","2017",5974,1
-"173","511","14","Video, audio, photographic, and information processing equipment and media","Publishing industries, except internet (includes software)",48204,"444","13378","17633","79659","2017",94831,0.508314791576594
-"174","511","17","Recreational books","Publishing industries, except internet (includes software)",13591,"568","1469","5033","20661","2017",94831,0.143318113275195
-"175","511","22","Educational books","Publishing industries, except internet (includes software)",4167,"173","441","1538","6320","2017",94831,0.0439413272031298
-"176","511","45","Magazines, newspapers, and stationery","Publishing industries, except internet (includes software)",28869,"1207","3463","8863","42402","2017",94831,0.304425767945081
-"177","512","14","Video, audio, photographic, and information processing equipment and media","Motion picture and sound recording industries",5912,"51","1374","4254","11590","2017",23742,0.249010192907084
-"178","512","45","Magazines, newspapers, and stationery","Motion picture and sound recording industries",81,"1","9","16","107","2017",23742,0.00341167551175133
-"179","512","77","Membership clubs, sports centers, parks, theaters, and museums","Motion picture and sound recording industries",12719,"0","0","0","12719","2017",23742,0.535717294246483
-"180","512","83","Purchased meals and beverages","Motion picture and sound recording industries",5030,"0","0","0","5030","2017",23742,0.211860837334681
-"181","513","78","Audio-video, photographic, and information processing equipment services","Broadcasting and telecommunications",102902,"0","0","0","102902","2017",349014,0.294836310291278
-"182","513","97","Telecommunication services","Broadcasting and telecommunications",162204,"0","0","0","162204","2017",349014,0.464749265072461
-"183","513","99","Internet access","Broadcasting and telecommunications",79146,"0","0","0","79146","2017",349014,0.226770272825732
-"184","513","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","Broadcasting and telecommunications",4762,"0","0","0","4762","2017",349014,0.0136441518105291
-"185","514","14","Video, audio, photographic, and information processing equipment and media","Data processing, internet publishing, and other information services",15033,"0","0","0","15033","2017",46716,0.32179553043925
-"186","514","17","Recreational books","Data processing, internet publishing, and other information services",1585,"0","0","0","1585","2017",46716,0.0339284185289836
-"187","514","22","Educational books","Data processing, internet publishing, and other information services",1617,"0","0","0","1617","2017",46716,0.0346134086822502
-"188","514","45","Magazines, newspapers, and stationery","Data processing, internet publishing, and other information services",7215,"0","0","0","7215","2017",46716,0.154443873619317
-"189","514","77","Membership clubs, sports centers, parks, theaters, and museums","Data processing, internet publishing, and other information services",4546,"0","0","0","4546","2017",46716,0.0973114136484288
-"190","514","78","Audio-video, photographic, and information processing equipment services","Data processing, internet publishing, and other information services",16720,"0","0","0","16720","2017",46716,0.357907355081771
-"191","521CI","88","Financial services furnished without payment","Federal Reserve banks, credit intermediation, and related activities",170542,"0","0","0","170542","2017",278749,0.611812060312324
-"192","521CI","89","Financial service charges, fees, and commissions","Federal Reserve banks, credit intermediation, and related activities",108207,"0","0","0","108207","2017",278749,0.388187939687676
-"193","523","89","Financial service charges, fees, and commissions","Securities, commodity contracts, and investments",225226,"0","0","0","225226","2017",225226,1
-"194","524","91","Life insurance","Insurance carriers and related activities",93061,"0","0","0","93061","2017",398565,0.233490145898411
-"195","524","92","Net household insurance","Insurance carriers and related activities",12707,"0","0","0","12707","2017",398565,0.0318818762309786
-"196","524","93","Net health insurance","Insurance carriers and related activities",215194,"0","0","0","215194","2017",398565,0.539921970067618
-"197","524","94","Net motor vehicle and other transportation insurance","Insurance carriers and related activities",77603,"0","0","0","77603","2017",398565,0.194706007802993
-"198","525","88","Financial services furnished without payment","Funds, trusts, and other financial vehicles",170526,"0","0","0","170526","2017",170526,1
-"199","532RL","9","Furniture and furnishings","Rental and leasing services and lessors of intangible assets",3335,"0","0","0","3335","2017",97091,0.0343492187741397
-"200","532RL","12","Tools and equipment for house and garden","Rental and leasing services and lessors of intangible assets",1229,"0","0","0","1229","2017",97091,0.0126582278481013
-"201","532RL","64","Paramedical services","Rental and leasing services and lessors of intangible assets",3019,"0","0","0","3019","2017",97091,0.0310945401736515
-"202","532RL","71","Other motor vehicle services","Rental and leasing services and lessors of intangible assets",78600,"0","0","0","78600","2017",97091,0.809549803792319
-"203","532RL","77","Membership clubs, sports centers, parks, theaters, and museums","Rental and leasing services and lessors of intangible assets",2409,"0","0","0","2409","2017",97091,0.0248117745208104
-"204","532RL","78","Audio-video, photographic, and information processing equipment services","Rental and leasing services and lessors of intangible assets",3567,"0","0","0","3567","2017",97091,0.0367387296453842
-"205","532RL","97","Telecommunication services","Rental and leasing services and lessors of intangible assets",72,"0","0","0","72","2017",97091,0.000741572339351742
-"206","532RL","105","Personal care and clothing services","Rental and leasing services and lessors of intangible assets",1187,"0","0","0","1187","2017",97091,0.0122256439834794
-"207","532RL","107","Household maintenance","Rental and leasing services and lessors of intangible assets",3673,"0","0","0","3673","2017",97091,0.0378304889227632
-"208","5411","104","Professional and other services","Legal services",103997,"0","0","0","103997","2017",104093,0.999077747783232
-"209","5411","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","Legal services",96,"0","0","0","96","2017",104093,0.000922252216767698
-"210","5412OP","78","Audio-video, photographic, and information processing equipment services","Miscellaneous professional, scientific, and technical services",7156,"0","0","0","7156","2017",72410,0.0988261289877089
-"211","5412OP","80","Other recreational services","Miscellaneous professional, scientific, and technical services",33726,"0","0","0","33726","2017",72410,0.46576439718271
-"212","5412OP","104","Professional and other services","Miscellaneous professional, scientific, and technical services",26225,"0","0","0","26225","2017",72410,0.362173732909819
-"213","5412OP","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","Miscellaneous professional, scientific, and technical services",5303,"0","0","0","5303","2017",72410,0.0732357409197625
-"214","561","73","Ground transportation","Administrative and support services",4439,"0","0","0","4439","2017",64490,0.0688323771127307
-"215","561","77","Membership clubs, sports centers, parks, theaters, and museums","Administrative and support services",3645,"0","0","0","3645","2017",64490,0.0565203907582571
-"216","561","80","Other recreational services","Administrative and support services",15311,"0","0","0","15311","2017",64490,0.237416653744767
-"217","561","97","Telecommunication services","Administrative and support services",68,"0","0","0","68","2017",64490,0.0010544270429524
-"218","561","98","Postal and delivery services","Administrative and support services",797,"0","0","0","797","2017",64490,0.0123585051946038
-"219","561","104","Professional and other services","Administrative and support services",7736,"0","0","0","7736","2017",64490,0.119956582415878
-"220","561","107","Household maintenance","Administrative and support services",32494,"0","0","0","32494","2017",64490,0.503861063730811
-"221","562","56","Water supply and sanitation","Waste management and remediation services",28334,"0","0","0","28334","2017",28334,1
-"222","61","70","Motor vehicle maintenance and repair","Educational services",136,"0","0","0","136","2017",360205,0.000377562776752127
-"223","61","77","Membership clubs, sports centers, parks, theaters, and museums","Educational services",19065,"0","0","0","19065","2017",360205,0.0529281936674949
-"224","61","101","Higher education","Educational services",180589,"0","0","0","180589","2017",360205,0.501350619785955
-"225","61","102","Nursery, elementary, and secondary schools","Educational services",33551,"0","0","0","33551","2017",360205,0.0931441817853722
-"226","61","103","Commercial and vocational schools","Educational services",51065,"0","0","0","51065","2017",360205,0.14176649407976
-"227","61","105","Personal care and clothing services","Educational services",20,"0","0","0","20","2017",360205,5.55239377576658e-05
-"228","61","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","Educational services",75779,"0","0","0","75779","2017",360205,0.210377423966908
-"229","621","21","Therapeutic appliances and equipment","Ambulatory health care services",9628,"0","0","0","9628","2017",1050872,0.00916191505720963
-"230","621","62","Physician services","Ambulatory health care services",551448,"0","0","0","551448","2017",1050872,0.524752776741601
-"231","621","63","Dental services","Ambulatory health care services",129315,"0","0","0","129315","2017",1050872,0.123054948652167
-"232","621","64","Paramedical services","Ambulatory health care services",353193,"0","0","0","353193","2017",1050872,0.336095166680623
-"233","621","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","Ambulatory health care services",7288,"0","0","0","7288","2017",1050872,0.00693519286839882
-"234","622","66","Hospitals","Hospitals",1022690,"0","0","0","1022690","2017",1039196,0.984116567038364
-"235","622","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","Hospitals",16506,"0","0","0","16506","2017",1039196,0.0158834329616357
-"236","623","67","Nursing homes","Nursing and residential care facilities",185641,"0","0","0","185641","2017",241619,0.768321199905637
-"237","623","106","Social services and religious activities","Nursing and residential care facilities",45541,"0","0","0","45541","2017",241619,0.188482693827886
-"238","623","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","Nursing and residential care facilities",10437,"0","0","0","10437","2017",241619,0.0431961062664774
-"239","624","102","Nursery, elementary, and secondary schools","Social assistance",12236,"0","0","0","12236","2017",225279,0.0543148717812135
-"240","624","106","Social services and religious activities","Social assistance",128493,"0","0","0","128493","2017",225279,0.570372737805122
-"241","624","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","Social assistance",84550,"0","0","0","84550","2017",225279,0.375312390413665
-"242","711AS","77","Membership clubs, sports centers, parks, theaters, and museums","Performing arts, spectator sports, museums, and related activities",65409,"0","0","0","65409","2017",86972,0.752069631605574
-"243","711AS","79","Gambling","Performing arts, spectator sports, museums, and related activities",3799,"0","0","0","3799","2017",86972,0.0436807248309801
-"244","711AS","83","Purchased meals and beverages","Performing arts, spectator sports, museums, and related activities",710,"0","0","0","710","2017",86972,0.00816354688865382
-"245","711AS","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","Performing arts, spectator sports, museums, and related activities",17054,"0","0","0","17054","2017",86972,0.196086096674792
-"246","713","77","Membership clubs, sports centers, parks, theaters, and museums","Amusements, gambling, and recreation industries",90654,"0","0","0","90654","2017",210212,0.431250356782677
-"247","713","79","Gambling","Amusements, gambling, and recreation industries",111858,"0","0","0","111858","2017",210212,0.532119955092954
-"248","713","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","Amusements, gambling, and recreation industries",7700,"0","0","0","7700","2017",210212,0.0366296881243697
-"249","721","54","Group housing","Accommodation",2401,"0","0","0","2401","2017",163294,0.0147035408526951
-"250","721","77","Membership clubs, sports centers, parks, theaters, and museums","Accommodation",8115,"0","0","0","8115","2017",163294,0.0496956409910958
-"251","721","85","Accommodations","Accommodation",149680,"0","0","0","149680","2017",163294,0.916628902470391
-"252","721","97","Telecommunication services","Accommodation",78,"0","0","0","78","2017",163294,0.000477666050191679
-"253","721","105","Personal care and clothing services","Accommodation",3020,"0","0","0","3020","2017",163294,0.0184942496356265
-"254","722","83","Purchased meals and beverages","Food services and drinking places",731851,"0","0","0","731851","2017",731851,1
-"255","81","41","Recreational items","Other services, except government",1045,"0","0","0","1045","2017",613310,0.00170386916893577
-"256","81","70","Motor vehicle maintenance and repair","Other services, except government",164881,"0","0","0","164881","2017",613310,0.268837944921818
-"257","81","71","Other motor vehicle services","Other services, except government",12278,"0","0","0","12278","2017",613310,0.0200192398623861
-"258","81","78","Audio-video, photographic, and information processing equipment services","Other services, except government",9294,"0","0","0","9294","2017",613310,0.0151538373742479
-"259","81","80","Other recreational services","Other services, except government",14372,"0","0","0","14372","2017",613310,0.0234335001875071
-"260","81","104","Professional and other services","Other services, except government",45782,"0","0","0","45782","2017",613310,0.0746474050643231
-"261","81","105","Personal care and clothing services","Other services, except government",148253,"0","0","0","148253","2017",613310,0.241726043925584
-"262","81","106","Social services and religious activities","Other services, except government",25675,"0","0","0","25675","2017",613310,0.0418630056578239
-"263","81","107","Household maintenance","Other services, except government",24790,"0","0","0","24790","2017",613310,0.0404200159788688
-"264","81","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","Other services, except government",166940,"0","0","0","166940","2017",613310,0.272195137858505
-"265","GFE","89","Financial service charges, fees, and commissions","Federal government enterprises",146,"0","0","0","146","2017",6914,0.0211165750650853
-"266","GFE","98","Postal and delivery services","Federal government enterprises",6768,"0","0","0","6768","2017",6914,0.978883424934915
-"267","GSLE","56","Water supply and sanitation","State and local government enterprises",33166,"0","0","0","33166","2017",72509,0.457405287619468
-"268","GSLE","71","Other motor vehicle services","State and local government enterprises",12730,"0","0","0","12730","2017",72509,0.175564412693597
-"269","GSLE","79","Gambling","State and local government enterprises",26613,"0","0","0","26613","2017",72509,0.367030299686935
-"270","HS","51","Rental of tenant-occupied nonfarm housing","Housing",467076,"0","0","0","467076","2017",2020853,0.231128142423026
-"271","HS","52","Imputed rental of owner-occupied nonfarm housing","Housing",1533227,"0","0","0","1533227","2017",2020853,0.758702884376053
-"272","HS","53","Rental value of farm dwellings","Housing",20550,"0","0","0","20550","2017",2020853,0.0101689732009206
-"273","ORE","107","Household maintenance","Other real estate",5861,"0","0","0","5861","2017",5861,1
-"274","Other","46","Net expenditures abroad by U.S. residents","Noncomparable imports and rest-of-the-world adjustment",7007,"0","0","0","7007","2017",-90776,-0.0771900061690315
-"275","Other","109","Foreign travel by U.S. residents","Noncomparable imports and rest-of-the-world adjustment",101652,"0","0","0","101652","2017",-90776,-1.1198114038953
-"276","Other","110","Less: Expenditures in the United States by nonresidents","Noncomparable imports and rest-of-the-world adjustment",-199435,"0","0","0","-199435","2017",-90776,2.19700141006433
-"277","Used","6","Net purchases of used motor vehicles","Scrap, used and secondhand goods",83867,"1525","3062","77605","166059","2017",81328,1.03121926027936
-"278","Used","7","Motor vehicles parts and accessories","Scrap, used and secondhand goods",-2376,"16","1117","2327","1083","2017",81328,-0.0292150304938029
-"279","Used","9","Furniture and furnishings","Scrap, used and secondhand goods",8916,"3528","3032","1946","17422","2017",81328,0.109630139681291
-"280","Used","10","Household appliances","Scrap, used and secondhand goods",-81,"34","29","35","18","2017",81328,-0.000995966948652371
-"281","Used","11","Glassware, tableware and household utensils","Scrap, used and secondhand goods",-559,"55","48","16","-440","2017",81328,-0.00687340153452685
-"282","Used","12","Tools and equipment for house and garden","Scrap, used and secondhand goods",62,"25","40","108","235","2017",81328,0.000762345071807987
-"283","Used","14","Video, audio, photographic, and information processing equipment and media","Scrap, used and secondhand goods",-3,"26","25","33","80","2017",81328,-3.68876647649026e-05
-"284","Used","15","Sporting equipment, supplies, guns, and ammunition","Scrap, used and secondhand goods",-125,"0","0","0","-125","2017",81328,-0.00153698603187094
-"285","Used","16","Sports and recreational vehicles","Scrap, used and secondhand goods",84,"1518","599","1775","3976","2017",81328,0.00103285461341727
-"286","Used","18","Musical instruments","Scrap, used and secondhand goods",-8,"16","14","30","53","2017",81328,-9.83671060397403e-05
-"287","Used","20","Jewelry and watches","Scrap, used and secondhand goods",5517,"2274","2011","1524","11326","2017",81328,0.0678364155026559
-"288","Used","21","Therapeutic appliances and equipment","Scrap, used and secondhand goods",0,"0","0","1","1","2017",81328,0
-"289","Used","22","Educational books","Scrap, used and secondhand goods",2,"119","32","113","266","2017",81328,2.45917765099351e-05
-"290","Used","27","Food and nonalcoholic beverages purchased for off-premises consumption","Scrap, used and secondhand goods",-1199,"0","0","0","-1199","2017",81328,-0.0147427700177061
-"291","Used","32","Womens and girls clothing","Scrap, used and secondhand goods",133,"382","391","1635","2542","2017",81328,0.00163535313791068
-"292","Used","33","Mens and boys clothing","Scrap, used and secondhand goods",-331,"52","64","158","-57","2017",81328,-0.00406993901239426
-"293","Used","34","Childrens and infants clothing","Scrap, used and secondhand goods",-16,"44","45","187","259","2017",81328,-0.000196734212079481
-"294","Used","35","Other clothing materials and footwear","Scrap, used and secondhand goods",-29,"8","11","24","14","2017",81328,-0.000356580759394059
-"295","Used","41","Recreational items","Scrap, used and secondhand goods",-12539,"8163","8241","4357","8222","2017",81328,-0.154178142829038
-"296","Used","42","Household supplies","Scrap, used and secondhand goods",0,"1","0","4","6","2017",81328,0
-"297","Used","45","Magazines, newspapers, and stationery","Scrap, used and secondhand goods",0,"7","2","7","17","2017",81328,0
-"298","Used","98","Postal and delivery services","Scrap, used and secondhand goods",13,"5","8","3","28","2017",81328,0.000159846547314578
+"","LineCode","PCECategory","CommodityCode","CommodityDescription","ProducersValue","Transportation Costs","Wholesale","Retail","PurchasersValue","Year","ProducersValuebyLineCodeSum","Mapping_ratio"
+"1","10","Household appliances","326","Plastics and rubber products",39,"1","17","63","120","2017",31026,0.00125701024946819
+"2","10","Household appliances","331","Primary metals",53,"2","5","30","90","2017",31026,0.00170824469799523
+"3","10","Household appliances","333","Machinery",4111,"120","1828","2331","8391","2017",31026,0.132501772706762
+"4","10","Household appliances","335","Electrical equipment, appliances, and components",26904,"1153","9319","14288","51664","2017",31026,0.867143685940824
+"5","10","Household appliances","Used","Scrap, used and secondhand goods",-81,"34","29","35","18","2017",31026,-0.00261071359504931
+"6","101","Higher education","61","Educational services",180589,"0","0","0","180589","2017",180589,1
+"7","102","Nursery, elementary, and secondary schools","61","Educational services",33551,"0","0","0","33551","2017",45787,0.732762574529888
+"8","102","Nursery, elementary, and secondary schools","624","Social assistance",12236,"0","0","0","12236","2017",45787,0.267237425470112
+"9","103","Commercial and vocational schools","61","Educational services",51065,"0","0","0","51065","2017",51065,1
+"10","104","Professional and other services","323","Printing and related support activities",6,"0","1","0","7","2017",192953,3.10956554186771e-05
+"11","104","Professional and other services","327","Nonmetallic mineral products",3169,"428","522","982","5100","2017",192953,0.0164236886702979
+"12","104","Professional and other services","332","Fabricated metal products",18,"1","5","6","29","2017",192953,9.32869662560313e-05
+"13","104","Professional and other services","481","Air transportation",46,"0","0","0","46","2017",192953,0.000238400024876524
+"14","104","Professional and other services","4A0","Other retail",5974,"0","0","0","5974","2017",192953,0.0309609075785295
+"15","104","Professional and other services","5411","Legal services",103997,"0","0","0","103997","2017",192953,0.538975812762693
+"16","104","Professional and other services","5412OP","Miscellaneous professional, scientific, and technical services",26225,"0","0","0","26225","2017",192953,0.135913927225801
+"17","104","Professional and other services","561","Administrative and support services",7736,"0","0","0","7736","2017",192953,0.0400926650531477
+"18","104","Professional and other services","81","Other services, except government",45782,"0","0","0","45782","2017",192953,0.237270216062979
+"19","105","Personal care and clothing services","532RL","Rental and leasing services and lessors of intangible assets",1187,"0","0","0","1187","2017",152480,0.00778462749213011
+"20","105","Personal care and clothing services","61","Educational services",20,"0","0","0","20","2017",152480,0.000131164742917104
+"21","105","Personal care and clothing services","721","Accommodation",3020,"0","0","0","3020","2017",152480,0.0198058761804827
+"22","105","Personal care and clothing services","81","Other services, except government",148253,"0","0","0","148253","2017",152480,0.97227833158447
+"23","106","Social services and religious activities","623","Nursing and residential care facilities",45541,"0","0","0","45541","2017",199709,0.228036793534593
+"24","106","Social services and religious activities","624","Social assistance",128493,"0","0","0","128493","2017",199709,0.643401148671317
+"25","106","Social services and religious activities","81","Other services, except government",25675,"0","0","0","25675","2017",199709,0.12856205779409
+"26","107","Household maintenance","481","Air transportation",22,"0","0","0","22","2017",78792,0.000279216164077571
+"27","107","Household maintenance","483","Water transportation",1,"0","0","0","1","2017",78792,1.26916438217078e-05
+"28","107","Household maintenance","484","Truck transportation",11700,"0","0","0","11700","2017",78792,0.148492232713981
+"29","107","Household maintenance","493","Warehousing and storage",251,"0","0","0","251","2017",78792,0.00318560259924865
+"30","107","Household maintenance","532RL","Rental and leasing services and lessors of intangible assets",3673,"0","0","0","3673","2017",78792,0.0466164077571327
+"31","107","Household maintenance","561","Administrative and support services",32494,"0","0","0","32494","2017",78792,0.412402274342573
+"32","107","Household maintenance","81","Other services, except government",24790,"0","0","0","24790","2017",78792,0.314625850340136
+"33","107","Household maintenance","ORE","Other real estate",5861,"0","0","0","5861","2017",78792,0.0743857244390293
+"34","109","Foreign travel by U.S. residents","481","Air transportation",33697,"0","0","0","33697","2017",155948,0.216078436401878
+"35","109","Foreign travel by U.S. residents","483","Water transportation",20599,"0","0","0","20599","2017",155948,0.132088901428681
+"36","109","Foreign travel by U.S. residents","Other","Noncomparable imports and rest-of-the-world adjustment",101652,"0","0","0","101652","2017",155948,0.651832662169441
+"37","11","Glassware, tableware and household utensils","321","Wood products",791,"49","137","90","1067","2017",25044,0.0315844114358729
+"38","11","Glassware, tableware and household utensils","326","Plastics and rubber products",14100,"287","2570","1606","18563","2017",25044,0.563009103977
+"39","11","Glassware, tableware and household utensils","327","Nonmetallic mineral products",6711,"935","2084","2853","12583","2017",25044,0.26796837565884
+"40","11","Glassware, tableware and household utensils","331","Primary metals",552,"16","55","63","686","2017",25044,0.0220412074748443
+"41","11","Glassware, tableware and household utensils","332","Fabricated metal products",3363,"97","955","452","4867","2017",25044,0.134283660757068
+"42","11","Glassware, tableware and household utensils","339","Miscellaneous manufacturing",86,"1","49","10","147","2017",25044,0.00343395623702284
+"43","11","Glassware, tableware and household utensils","Used","Scrap, used and secondhand goods",-559,"55","48","16","-440","2017",25044,-0.0223207155406485
+"44","110","Less: Expenditures in the United States by nonresidents","Other","Noncomparable imports and rest-of-the-world adjustment",-199435,"0","0","0","-199435","2017",-199435,1
+"45","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","513","Broadcasting and telecommunications",4762,"0","0","0","4762","2017",396415,0.0120126634965882
+"46","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","5411","Legal services",96,"0","0","0","96","2017",396415,0.000242170452682164
+"47","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","5412OP","Miscellaneous professional, scientific, and technical services",5303,"0","0","0","5303","2017",396415,0.0133773949018074
+"48","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","61","Educational services",75779,"0","0","0","75779","2017",396415,0.191160778477101
+"49","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","621","Ambulatory health care services",7288,"0","0","0","7288","2017",396415,0.0183847735327876
+"50","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","622","Hospitals",16506,"0","0","0","16506","2017",396415,0.0416381822080396
+"51","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","623","Nursing and residential care facilities",10437,"0","0","0","10437","2017",396415,0.026328468902539
+"52","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","624","Social assistance",84550,"0","0","0","84550","2017",396415,0.213286580982052
+"53","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","711AS","Performing arts, spectator sports, museums, and related activities",17054,"0","0","0","17054","2017",396415,0.0430205718754336
+"54","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","713","Amusements, gambling, and recreation industries",7700,"0","0","0","7700","2017",396415,0.0194240883922152
+"55","111","Final consumption expenditures of nonprofit institutions serving households (NPISHs)","81","Other services, except government",166940,"0","0","0","166940","2017",396415,0.421124326778755
+"56","12","Tools and equipment for house and garden","313TT","Textile mills and textile product mills",27,"2","16","60","104","2017",10559,0.00255706032768255
+"57","12","Tools and equipment for house and garden","321","Wood products",31,"2","5","116","154","2017",10559,0.00293588407993181
+"58","12","Tools and equipment for house and garden","325","Chemical products",2716,"73","546","2127","5463","2017",10559,0.257221327777252
+"59","12","Tools and equipment for house and garden","326","Plastics and rubber products",149,"3","38","335","525","2017",10559,0.0141111847712852
+"60","12","Tools and equipment for house and garden","327","Nonmetallic mineral products",228,"39","50","145","462","2017",10559,0.0215929538782082
+"61","12","Tools and equipment for house and garden","331","Primary metals",14,"0","1","51","66","2017",10559,0.00132588313287243
+"62","12","Tools and equipment for house and garden","332","Fabricated metal products",2044,"59","992","7445","10540","2017",10559,0.193578937399375
+"63","12","Tools and equipment for house and garden","333","Machinery",3545,"103","1096","13109","17853","2017",10559,0.335732550430912
+"64","12","Tools and equipment for house and garden","334","Computer and electronic products",0,"0","0","1","2","2017",10559,0
+"65","12","Tools and equipment for house and garden","335","Electrical equipment, appliances, and components",91,"1","28","335","455","2017",10559,0.0086182403636708
+"66","12","Tools and equipment for house and garden","337","Furniture and related products",69,"9","23","156","258","2017",10559,0.00653470972629984
+"67","12","Tools and equipment for house and garden","339","Miscellaneous manufacturing",354,"46","118","1284","1803","2017",10559,0.03352590207406
+"68","12","Tools and equipment for house and garden","532RL","Rental and leasing services and lessors of intangible assets",1229,"0","0","0","1229","2017",10559,0.116393597878587
+"69","12","Tools and equipment for house and garden","Used","Scrap, used and secondhand goods",62,"25","40","108","235","2017",10559,0.00587176815986362
+"70","14","Video, audio, photographic, and information processing equipment and media","315AL","Apparel and leather and allied products",15,"1","4","8","27","2017",124770,0.000120221207020918
+"71","14","Video, audio, photographic, and information processing equipment and media","333","Machinery",779,"23","565","302","1669","2017",124770,0.00624348801795303
+"72","14","Video, audio, photographic, and information processing equipment and media","334","Computer and electronic products",53797,"497","16593","30608","101495","2017",124770,0.431169351606957
+"73","14","Video, audio, photographic, and information processing equipment and media","335","Electrical equipment, appliances, and components",1025,"10","322","870","2228","2017",124770,0.0082151158130961
+"74","14","Video, audio, photographic, and information processing equipment and media","339","Miscellaneous manufacturing",8,"1","1","0","11","2017",124770,6.41179770778232e-05
+"75","14","Video, audio, photographic, and information processing equipment and media","511","Publishing industries, except internet (includes software)",48204,"444","13378","17633","79659","2017",124770,0.386342870882424
+"76","14","Video, audio, photographic, and information processing equipment and media","512","Motion picture and sound recording industries",5912,"51","1374","4254","11590","2017",124770,0.0473831850605113
+"77","14","Video, audio, photographic, and information processing equipment and media","514","Data processing, internet publishing, and other information services",15033,"0","0","0","15033","2017",124770,0.120485693676365
+"78","14","Video, audio, photographic, and information processing equipment and media","Used","Scrap, used and secondhand goods",-3,"26","25","33","80","2017",124770,-2.40442414041837e-05
+"79","15","Sporting equipment, supplies, guns, and ammunition","313TT","Textile mills and textile product mills",1083,"57","588","1081","2809","2017",25745,0.0420664206642066
+"80","15","Sporting equipment, supplies, guns, and ammunition","315AL","Apparel and leather and allied products",187,"8","110","187","492","2017",25745,0.00726354631967372
+"81","15","Sporting equipment, supplies, guns, and ammunition","325","Chemical products",1183,"33","188","1181","2585","2017",25745,0.0459506700330161
+"82","15","Sporting equipment, supplies, guns, and ammunition","331","Primary metals",8,"0","1","8","16","2017",25745,0.000310739949504758
+"83","15","Sporting equipment, supplies, guns, and ammunition","332","Fabricated metal products",7428,"212","3224","7104","17968","2017",25745,0.288522043115168
+"84","15","Sporting equipment, supplies, guns, and ammunition","3364OT","Other transportation equipment",2232,"22","141","1460","3856","2017",25745,0.0866964459118275
+"85","15","Sporting equipment, supplies, guns, and ammunition","339","Miscellaneous manufacturing",13749,"1656","6161","16498","38064","2017",25745,0.534045445717615
+"86","15","Sporting equipment, supplies, guns, and ammunition","Used","Scrap, used and secondhand goods",-125,"0","0","0","-125","2017",25745,-0.00485531171101185
+"87","16","Sports and recreational vehicles","326","Plastics and rubber products",981,"22","326","1172","2501","2017",38610,0.0254079254079254
+"88","16","Sports and recreational vehicles","332","Fabricated metal products",99,"3","52","47","202","2017",38610,0.00256410256410256
+"89","16","Sports and recreational vehicles","333","Machinery",225,"7","43","107","382","2017",38610,0.00582750582750583
+"90","16","Sports and recreational vehicles","335","Electrical equipment, appliances, and components",72,"1","11","40","124","2017",38610,0.00186480186480186
+"91","16","Sports and recreational vehicles","3361MV","Motor vehicles, bodies and trailers, and parts",17358,"207","548","12152","30265","2017",38610,0.44957264957265
+"92","16","Sports and recreational vehicles","3364OT","Other transportation equipment",19791,"183","1838","11351","33163","2017",38610,0.512587412587413
+"93","16","Sports and recreational vehicles","Used","Scrap, used and secondhand goods",84,"1518","599","1775","3976","2017",38610,0.00217560217560218
+"94","17","Recreational books","323","Printing and related support activities",22,"1","4","8","35","2017",15198,0.00144755888932754
+"95","17","Recreational books","511","Publishing industries, except internet (includes software)",13591,"568","1469","5033","20661","2017",15198,0.894262402947756
+"96","17","Recreational books","514","Data processing, internet publishing, and other information services",1585,"0","0","0","1585","2017",15198,0.104290038162916
+"97","18","Musical instruments","315AL","Apparel and leather and allied products",189,"8","47","135","380","2017",2525,0.0748514851485148
+"98","18","Musical instruments","339","Miscellaneous manufacturing",2344,"304","588","1668","4904","2017",2525,0.928316831683168
+"99","18","Musical instruments","Used","Scrap, used and secondhand goods",-8,"16","14","30","53","2017",2525,-0.00316831683168317
+"100","20","Jewelry and watches","334","Computer and electronic products",3730,"47","2125","5577","11479","2017",23169,0.160990979325823
+"101","20","Jewelry and watches","339","Miscellaneous manufacturing",13922,"175","7931","21106","43134","2017",23169,0.600889119081531
+"102","20","Jewelry and watches","Used","Scrap, used and secondhand goods",5517,"2274","2011","1524","11326","2017",23169,0.238119901592645
+"103","21","Therapeutic appliances and equipment","334","Computer and electronic products",4151,"40","2094","3906","10192","2017",30830,0.134641582873824
+"104","21","Therapeutic appliances and equipment","335","Electrical equipment, appliances, and components",622,"8","196","604","1430","2017",30830,0.0201751540707103
+"105","21","Therapeutic appliances and equipment","339","Miscellaneous manufacturing",16429,"157","5743","16641","38970","2017",30830,0.532890042166721
+"106","21","Therapeutic appliances and equipment","621","Ambulatory health care services",9628,"0","0","0","9628","2017",30830,0.312293220888745
+"107","21","Therapeutic appliances and equipment","Used","Scrap, used and secondhand goods",0,"0","0","1","1","2017",30830,0
+"108","22","Educational books","511","Publishing industries, except internet (includes software)",4167,"173","441","1538","6320","2017",5786,0.720186657449015
+"109","22","Educational books","514","Data processing, internet publishing, and other information services",1617,"0","0","0","1617","2017",5786,0.279467680608365
+"110","22","Educational books","Used","Scrap, used and secondhand goods",2,"119","32","113","266","2017",5786,0.000345661942620118
+"111","23","Luggage and similar personal items","315AL","Apparel and leather and allied products",11319,"473","3670","10760","26223","2017",12531,0.903279865932487
+"112","23","Luggage and similar personal items","321","Wood products",175,"7","103","249","533","2017",12531,0.0139653658925864
+"113","23","Luggage and similar personal items","339","Miscellaneous manufacturing",1037,"136","564","1177","2914","2017",12531,0.0827547681749262
+"114","24","Telephone and facsimile equipment","334","Computer and electronic products",10737,"99","7185","9573","27595","2017",10737,1
+"115","27","Food and nonalcoholic beverages purchased for off-premises consumption","111CA","Farms",55659,"6470","15192","30536","107857","2017",486648,0.114372195097894
+"116","27","Food and nonalcoholic beverages purchased for off-premises consumption","113FF","Forestry, fishing, and related activities",3293,"324","360","1533","5511","2017",486648,0.0067666979007414
+"117","27","Food and nonalcoholic beverages purchased for off-premises consumption","212","Mining, except oil and gas",7,"2","0","4","13","2017",486648,1.43841133632523e-05
+"118","27","Food and nonalcoholic beverages purchased for off-premises consumption","311FT","Food and beverage and tobacco products",428332,"8585","73655","238847","749419","2017",486648,0.880168006444083
+"119","27","Food and nonalcoholic beverages purchased for off-premises consumption","325","Chemical products",556,"18","70","310","954","2017",486648,0.00114250957570975
+"120","27","Food and nonalcoholic beverages purchased for off-premises consumption","Used","Scrap, used and secondhand goods",-1199,"0","0","0","-1199","2017",486648,-0.00246379313179136
+"121","28","Alcoholic beverages purchased for off-premises consumption","311FT","Food and beverage and tobacco products",58973,"1584","41365","45533","147456","2017",58973,1
+"122","29","Food produced and consumed on farms","111CA","Farms",433,"0","0","0","433","2017",433,1
+"123","32","Womens and girls clothing","313TT","Textile mills and textile product mills",45,"2","19","76","142","2017",56417,0.000797631919456901
+"124","32","Womens and girls clothing","315AL","Apparel and leather and allied products",56179,"2386","22711","94506","175781","2017",56417,0.995781413403761
+"125","32","Womens and girls clothing","339","Miscellaneous manufacturing",60,"7","27","101","195","2017",56417,0.00106350922594254
+"126","32","Womens and girls clothing","Used","Scrap, used and secondhand goods",133,"382","391","1635","2542","2017",56417,0.00235744545083929
+"127","33","Mens and boys clothing","313TT","Textile mills and textile product mills",4,"0","1","5","10","2017",40141,9.96487381978526e-05
+"128","33","Mens and boys clothing","315AL","Apparel and leather and allied products",40423,"1728","19358","48427","109936","2017",40141,1.00702523604295
+"129","33","Mens and boys clothing","339","Miscellaneous manufacturing",45,"4","21","53","123","2017",40141,0.00112104830472584
+"130","33","Mens and boys clothing","Used","Scrap, used and secondhand goods",-331,"52","64","158","-57","2017",40141,-0.0082459330858723
+"131","34","Childrens and infants clothing","313TT","Textile mills and textile product mills",254,"11","150","522","936","2017",6774,0.0374963094183643
+"132","34","Childrens and infants clothing","315AL","Apparel and leather and allied products",3089,"129","1244","5197","9659","2017",6774,0.456008266902864
+"133","34","Childrens and infants clothing","322","Paper products",3447,"152","560","7093","11251","2017",6774,0.508857395925598
+"134","34","Childrens and infants clothing","Used","Scrap, used and secondhand goods",-16,"44","45","187","259","2017",6774,-0.0023619722468261
+"135","35","Other clothing materials and footwear","313TT","Textile mills and textile product mills",954,"40","150","1269","2414","2017",32278,0.0295557345560444
+"136","35","Other clothing materials and footwear","315AL","Apparel and leather and allied products",31180,"1309","17256","37678","87423","2017",32278,0.9659830224921
+"137","35","Other clothing materials and footwear","339","Miscellaneous manufacturing",173,"22","29","232","457","2017",32278,0.00535968771299337
+"138","35","Other clothing materials and footwear","Used","Scrap, used and secondhand goods",-29,"8","11","24","14","2017",32278,-0.000898444761137617
+"139","37","Motor vehicle fuels, lubricants, and fluids","324","Petroleum and coal products",165405,"7912","61511","67584","302413","2017",165455,0.999697803028014
+"140","37","Motor vehicle fuels, lubricants, and fluids","325","Chemical products",50,"1","6","32","89","2017",165455,0.000302196971986341
+"141","38","Fuel oil and other fuels","212","Mining, except oil and gas",121,"45","3","52","221","2017",11296,0.0107117563739377
+"142","38","Fuel oil and other fuels","321","Wood products",578,"37","145","264","1025","2017",11296,0.0511685552407932
+"143","38","Fuel oil and other fuels","324","Petroleum and coal products",10274,"650","2031","6758","19713","2017",11296,0.909525495750708
+"144","38","Fuel oil and other fuels","325","Chemical products",323,"12","41","148","524","2017",11296,0.0285941926345609
+"145","40","Pharmaceutical and other medical products","324","Petroleum and coal products",642,"30","65","1322","2059","2017",198700,0.00323100150981379
+"146","40","Pharmaceutical and other medical products","325","Chemical products",196683,"3645","75953","156757","433038","2017",198700,0.989849018621037
+"147","40","Pharmaceutical and other medical products","326","Plastics and rubber products",147,"3","87","331","568","2017",198700,0.00073980875691998
+"148","40","Pharmaceutical and other medical products","339","Miscellaneous manufacturing",1228,"12","620","2493","4353","2017",198700,0.00618017111222949
+"149","41","Recreational items","111CA","Farms",18570,"2028","4325","18766","43690","2017",53529,0.346914756487138
+"150","41","Recreational items","212","Mining, except oil and gas",14,"6","2","14","36","2017",53529,0.000261540473388257
+"151","41","Recreational items","311FT","Food and beverage and tobacco products",20742,"452","5342","21417","47953","2017",53529,0.387490892787087
+"152","41","Recreational items","313TT","Textile mills and textile product mills",34,"2","19","35","89","2017",53529,0.000635169721085767
+"153","41","Recreational items","315AL","Apparel and leather and allied products",301,"13","177","311","802","2017",53529,0.00562312017784752
+"154","41","Recreational items","322","Paper products",172,"12","28","198","410","2017",53529,0.00321321153019858
+"155","41","Recreational items","323","Printing and related support activities",331,"14","54","502","900","2017",53529,0.00618356404939379
+"156","41","Recreational items","325","Chemical products",851,"20","464","754","2089","2017",53529,0.015897924489529
+"157","41","Recreational items","326","Plastics and rubber products",1454,"30","258","1578","3320","2017",53529,0.027162846307609
+"158","41","Recreational items","335","Electrical equipment, appliances, and components",51,"0","16","29","96","2017",53529,0.00095275458162865
+"159","41","Recreational items","339","Miscellaneous manufacturing",22503,"2961","10459","34182","70106","2017",53529,0.420388948046853
+"160","41","Recreational items","81","Other services, except government",1045,"0","0","0","1045","2017",53529,0.0195221281921949
+"161","41","Recreational items","Used","Scrap, used and secondhand goods",-12539,"8163","8241","4357","8222","2017",53529,-0.234246856843954
+"162","42","Household supplies","212","Mining, except oil and gas",31,"13","1","20","65","2017",48802,0.000635219868038195
+"163","42","Household supplies","313TT","Textile mills and textile product mills",9470,"552","3059","20855","33936","2017",48802,0.194049424203926
+"164","42","Household supplies","315AL","Apparel and leather and allied products",387,"16","156","870","1429","2017",48802,0.00793000286873489
+"165","42","Household supplies","321","Wood products",600,"39","99","693","1431","2017",48802,0.0122945780910618
+"166","42","Household supplies","322","Paper products",14663,"739","2381","16943","34727","2017",48802,0.300458997582066
+"167","42","Household supplies","323","Printing and related support activities",1836,"77","298","4018","6229","2017",48802,0.0376214089586492
+"168","42","Household supplies","325","Chemical products",13884,"290","2260","9036","25469","2017",48802,0.284496537027171
+"169","42","Household supplies","326","Plastics and rubber products",3028,"59","578","3745","7410","2017",48802,0.0620466374328921
+"170","42","Household supplies","332","Fabricated metal products",607,"17","157","590","1371","2017",48802,0.0124380148354576
+"171","42","Household supplies","335","Electrical equipment, appliances, and components",1290,"13","405","4770","6477","2017",48802,0.026433342895783
+"172","42","Household supplies","339","Miscellaneous manufacturing",3006,"366","1595","6447","11414","2017",48802,0.0615958362362198
+"173","42","Household supplies","Used","Scrap, used and secondhand goods",0,"1","0","4","6","2017",48802,0
+"174","43","Personal care products","313TT","Textile mills and textile product mills",475,"20","280","495","1270","2017",57186,0.00830622879725807
+"175","43","Personal care products","315AL","Apparel and leather and allied products",227,"10","91","236","564","2017",57186,0.00396950302521596
+"176","43","Personal care products","322","Paper products",3654,"162","593","7467","11876","2017",57186,0.0638967579477494
+"177","43","Personal care products","325","Chemical products",37607,"756","4739","38240","81341","2017",57186,0.657625992375756
+"178","43","Personal care products","326","Plastics and rubber products",622,"13","240","977","1852","2017",57186,0.0108767880250411
+"179","43","Personal care products","332","Fabricated metal products",1942,"57","1018","2024","5042","2017",57186,0.0339593606826846
+"180","43","Personal care products","333","Machinery",212,"6","40","302","561","2017",57186,0.00370720106319729
+"181","43","Personal care products","335","Electrical equipment, appliances, and components",6660,"548","2219","2331","11757","2017",57186,0.116462071136292
+"182","43","Personal care products","339","Miscellaneous manufacturing",5787,"753","2983","6032","15554","2017",57186,0.101196096946805
+"183","44","Tobacco","311FT","Food and beverage and tobacco products",56674,"710","31459","26120","114963","2017",56674,1
+"184","45","Magazines, newspapers, and stationery","322","Paper products",742,"31","121","557","1450","2017",41474,0.0178907267203549
+"185","45","Magazines, newspapers, and stationery","323","Printing and related support activities",389,"16","56","292","754","2017",41474,0.00937937020784106
+"186","45","Magazines, newspapers, and stationery","325","Chemical products",1630,"46","207","1223","3105","2017",41474,0.0393017312050923
+"187","45","Magazines, newspapers, and stationery","326","Plastics and rubber products",177,"4","46","133","360","2017",41474,0.00426773400202537
+"188","45","Magazines, newspapers, and stationery","339","Miscellaneous manufacturing",2371,"309","398","1779","4857","2017",41474,0.0571683464339104
+"189","45","Magazines, newspapers, and stationery","511","Publishing industries, except internet (includes software)",28869,"1207","3463","8863","42402","2017",41474,0.696074649177798
+"190","45","Magazines, newspapers, and stationery","512","Motion picture and sound recording industries",81,"1","9","16","107","2017",41474,0.00195303081448618
+"191","45","Magazines, newspapers, and stationery","514","Data processing, internet publishing, and other information services",7215,"0","0","0","7215","2017",41474,0.173964411438492
+"192","45","Magazines, newspapers, and stationery","Used","Scrap, used and secondhand goods",0,"7","2","7","17","2017",41474,0
+"193","46","Net expenditures abroad by U.S. residents","Other","Noncomparable imports and rest-of-the-world adjustment",7007,"0","0","0","7007","2017",7007,1
+"194","5","New motor vehicles","3361MV","Motor vehicles, bodies and trailers, and parts",156591,"2756","10488","110896","280730","2017",156591,1
+"195","51","Rental of tenant-occupied nonfarm housing","HS","Housing",467076,"0","0","0","467076","2017",467076,1
+"196","52","Imputed rental of owner-occupied nonfarm housing","HS","Housing",1533227,"0","0","0","1533227","2017",1533227,1
+"197","53","Rental value of farm dwellings","HS","Housing",20550,"0","0","0","20550","2017",20550,1
+"198","54","Group housing","721","Accommodation",2401,"0","0","0","2401","2017",2401,1
+"199","56","Water supply and sanitation","22","Utilities",39512,"0","0","0","39512","2017",101012,0.391161446164812
+"200","56","Water supply and sanitation","562","Waste management and remediation services",28334,"0","0","0","28334","2017",101012,0.28050132657506
+"201","56","Water supply and sanitation","GSLE","State and local government enterprises",33166,"0","0","0","33166","2017",101012,0.328337227260127
+"202","58","Electricity","22","Utilities",177661,"0","0","0","177661","2017",177661,1
+"203","59","Natural Gas","22","Utilities",48244,"0","0","0","48244","2017",48244,1
+"204","6","Net purchases of used motor vehicles","Used","Scrap, used and secondhand goods",83867,"1525","3062","77605","166059","2017",83867,1
+"205","62","Physician services","621","Ambulatory health care services",551448,"0","0","0","551448","2017",551448,1
+"206","63","Dental services","621","Ambulatory health care services",129315,"0","0","0","129315","2017",129315,1
+"207","64","Paramedical services","532RL","Rental and leasing services and lessors of intangible assets",3019,"0","0","0","3019","2017",356212,0.00847528999584517
+"208","64","Paramedical services","621","Ambulatory health care services",353193,"0","0","0","353193","2017",356212,0.991524710004155
+"209","66","Hospitals","622","Hospitals",1022690,"0","0","0","1022690","2017",1022690,1
+"210","67","Nursing homes","623","Nursing and residential care facilities",185641,"0","0","0","185641","2017",185641,1
+"211","7","Motor vehicles parts and accessories","325","Chemical products",177,"4","22","113","315","2017",30429,0.00581681948141575
+"212","7","Motor vehicles parts and accessories","326","Plastics and rubber products",13930,"310","4619","17119","35978","2017",30429,0.45778697952611
+"213","7","Motor vehicles parts and accessories","327","Nonmetallic mineral products",109,"15","17","136","277","2017",30429,0.00358210917217128
+"214","7","Motor vehicles parts and accessories","331","Primary metals",12,"0","1","14","28","2017",30429,0.000394360642807848
+"215","7","Motor vehicles parts and accessories","332","Fabricated metal products",653,"19","306","811","1789","2017",30429,0.0214597916461271
+"216","7","Motor vehicles parts and accessories","333","Machinery",0,"0","0","0","0","2017",30429,0
+"217","7","Motor vehicles parts and accessories","334","Computer and electronic products",6,"0","4","8","18","2017",30429,0.000197180321403924
+"218","7","Motor vehicles parts and accessories","335","Electrical equipment, appliances, and components",1540,"15","248","1914","3717","2017",30429,0.0506096158270071
+"219","7","Motor vehicles parts and accessories","3361MV","Motor vehicles, bodies and trailers, and parts",16279,"186","2463","20229","39158","2017",30429,0.534983075355746
+"220","7","Motor vehicles parts and accessories","339","Miscellaneous manufacturing",99,"13","25","124","261","2017",30429,0.00325347530316474
+"221","7","Motor vehicles parts and accessories","Used","Scrap, used and secondhand goods",-2376,"16","1117","2327","1083","2017",30429,-0.0780834072759539
+"222","70","Motor vehicle maintenance and repair","487OS","Other transportation and support activities",7298,"0","0","0","7298","2017",172315,0.0423526680788092
+"223","70","Motor vehicle maintenance and repair","61","Educational services",136,"0","0","0","136","2017",172315,0.000789252241534399
+"224","70","Motor vehicle maintenance and repair","81","Other services, except government",164881,"0","0","0","164881","2017",172315,0.956858079679656
+"225","71","Other motor vehicle services","532RL","Rental and leasing services and lessors of intangible assets",78600,"0","0","0","78600","2017",103608,0.758628677322215
+"226","71","Other motor vehicle services","81","Other services, except government",12278,"0","0","0","12278","2017",103608,0.118504362597483
+"227","71","Other motor vehicle services","GSLE","State and local government enterprises",12730,"0","0","0","12730","2017",103608,0.122866960080303
+"228","73","Ground transportation","482","Rail transportation",1307,"0","0","0","1307","2017",54975,0.0237744429286039
+"229","73","Ground transportation","485","Transit and ground passenger transportation",47460,"0","0","0","47460","2017",54975,0.863301500682128
+"230","73","Ground transportation","487OS","Other transportation and support activities",1769,"0","0","0","1769","2017",54975,0.0321782628467485
+"231","73","Ground transportation","561","Administrative and support services",4439,"0","0","0","4439","2017",54975,0.0807457935425193
+"232","74","Air transportation","481","Air transportation",94749,"0","0","0","94749","2017",94749,1
+"233","75","Water transportation","483","Water transportation",1427,"0","0","0","1427","2017",3759,0.379622239957435
+"234","75","Water transportation","487OS","Other transportation and support activities",2332,"0","0","0","2332","2017",3759,0.620377760042565
+"235","77","Membership clubs, sports centers, parks, theaters, and museums","113FF","Forestry, fishing, and related activities",3011,"0","0","0","3011","2017",209734,0.0143562798592503
+"236","77","Membership clubs, sports centers, parks, theaters, and museums","481","Air transportation",161,"0","0","0","161","2017",209734,0.000767639009411922
+"237","77","Membership clubs, sports centers, parks, theaters, and museums","512","Motion picture and sound recording industries",12719,"0","0","0","12719","2017",209734,0.0606434817435418
+"238","77","Membership clubs, sports centers, parks, theaters, and museums","514","Data processing, internet publishing, and other information services",4546,"0","0","0","4546","2017",209734,0.0216750741415317
+"239","77","Membership clubs, sports centers, parks, theaters, and museums","532RL","Rental and leasing services and lessors of intangible assets",2409,"0","0","0","2409","2017",209734,0.0114859774762318
+"240","77","Membership clubs, sports centers, parks, theaters, and museums","561","Administrative and support services",3645,"0","0","0","3645","2017",209734,0.0173791564553196
+"241","77","Membership clubs, sports centers, parks, theaters, and museums","61","Educational services",19065,"0","0","0","19065","2017",209734,0.0909008553691819
+"242","77","Membership clubs, sports centers, parks, theaters, and museums","711AS","Performing arts, spectator sports, museums, and related activities",65409,"0","0","0","65409","2017",209734,0.311866459420027
+"243","77","Membership clubs, sports centers, parks, theaters, and museums","713","Amusements, gambling, and recreation industries",90654,"0","0","0","90654","2017",209734,0.432233209684648
+"244","77","Membership clubs, sports centers, parks, theaters, and museums","721","Accommodation",8115,"0","0","0","8115","2017",209734,0.0386918668408556
+"245","78","Audio-video, photographic, and information processing equipment services","513","Broadcasting and telecommunications",102902,"0","0","0","102902","2017",139639,0.736914472317905
+"246","78","Audio-video, photographic, and information processing equipment services","514","Data processing, internet publishing, and other information services",16720,"0","0","0","16720","2017",139639,0.119737322667736
+"247","78","Audio-video, photographic, and information processing equipment services","532RL","Rental and leasing services and lessors of intangible assets",3567,"0","0","0","3567","2017",139639,0.0255444395906588
+"248","78","Audio-video, photographic, and information processing equipment services","5412OP","Miscellaneous professional, scientific, and technical services",7156,"0","0","0","7156","2017",139639,0.0512464282900909
+"249","78","Audio-video, photographic, and information processing equipment services","81","Other services, except government",9294,"0","0","0","9294","2017",139639,0.0665573371336088
+"250","79","Gambling","711AS","Performing arts, spectator sports, museums, and related activities",3799,"0","0","0","3799","2017",142270,0.0267027482954945
+"251","79","Gambling","713","Amusements, gambling, and recreation industries",111858,"0","0","0","111858","2017",142270,0.78623743586139
+"252","79","Gambling","GSLE","State and local government enterprises",26613,"0","0","0","26613","2017",142270,0.187059815843115
+"253","80","Other recreational services","113FF","Forestry, fishing, and related activities",124,"0","0","0","124","2017",63554,0.00195109670516411
+"254","80","Other recreational services","334","Computer and electronic products",21,"0","4","21","46","2017",63554,0.000330427667810051
+"255","80","Other recreational services","5412OP","Miscellaneous professional, scientific, and technical services",33726,"0","0","0","33726","2017",63554,0.530666834502942
+"256","80","Other recreational services","561","Administrative and support services",15311,"0","0","0","15311","2017",63554,0.240913239135224
+"257","80","Other recreational services","81","Other services, except government",14372,"0","0","0","14372","2017",63554,0.22613840198886
+"258","83","Purchased meals and beverages","481","Air transportation",1109,"0","0","0","1109","2017",738852,0.00150097719164325
+"259","83","Purchased meals and beverages","482","Rail transportation",152,"0","0","0","152","2017",738852,0.000205724556474098
+"260","83","Purchased meals and beverages","512","Motion picture and sound recording industries",5030,"0","0","0","5030","2017",738852,0.00680785867805731
+"261","83","Purchased meals and beverages","711AS","Performing arts, spectator sports, museums, and related activities",710,"0","0","0","710","2017",738852,0.000960950230898746
+"262","83","Purchased meals and beverages","722","Food services and drinking places",731851,"0","0","0","731851","2017",738852,0.990524489342927
+"263","84","Food furnished to employees (including military)","111CA","Farms",858,"101","226","0","1185","2017",20637,0.0415758104375636
+"264","84","Food furnished to employees (including military)","113FF","Forestry, fishing, and related activities",144,"14","16","0","174","2017",20637,0.00697775839511557
+"265","84","Food furnished to employees (including military)","311FT","Food and beverage and tobacco products",19635,"413","3294","0","23342","2017",20637,0.951446431167321
+"266","85","Accommodations","721","Accommodation",149680,"0","0","0","149680","2017",149680,1
+"267","88","Financial services furnished without payment","521CI","Federal Reserve banks, credit intermediation, and related activities",170542,"0","0","0","170542","2017",341068,0.500023455733168
+"268","88","Financial services furnished without payment","525","Funds, trusts, and other financial vehicles",170526,"0","0","0","170526","2017",341068,0.499976544266832
+"269","89","Financial service charges, fees, and commissions","521CI","Federal Reserve banks, credit intermediation, and related activities",108207,"0","0","0","108207","2017",333579,0.324381930517209
+"270","89","Financial service charges, fees, and commissions","523","Securities, commodity contracts, and investments",225226,"0","0","0","225226","2017",333579,0.675180392051058
+"271","89","Financial service charges, fees, and commissions","GFE","Federal government enterprises",146,"0","0","0","146","2017",333579,0.000437677431732813
+"272","9","Furniture and furnishings","313TT","Textile mills and textile product mills",8703,"416","3007","13384","25510","2017",76910,0.113158236900273
+"273","9","Furniture and furnishings","315AL","Apparel and leather and allied products",136,"6","80","193","414","2017",76910,0.00176830061110389
+"274","9","Furniture and furnishings","321","Wood products",968,"67","175","1339","2549","2017",76910,0.0125861396437394
+"275","9","Furniture and furnishings","323","Printing and related support activities",219,"9","36","311","575","2017",76910,0.00284748407229229
+"276","9","Furniture and furnishings","326","Plastics and rubber products",382,"8","163","496","1049","2017",76910,0.0049668443635418
+"277","9","Furniture and furnishings","327","Nonmetallic mineral products",1353,"184","402","937","2876","2017",76910,0.0175919906384085
+"278","9","Furniture and furnishings","331","Primary metals",110,"3","11","406","530","2017",76910,0.00143024314133403
+"279","9","Furniture and furnishings","332","Fabricated metal products",475,"14","206","1755","2450","2017",76910,0.00617604992848784
+"280","9","Furniture and furnishings","334","Computer and electronic products",726,"18","223","1033","2000","2017",76910,0.00943960473280458
+"281","9","Furniture and furnishings","335","Electrical equipment, appliances, and components",2021,"255","634","2890","5801","2017",76910,0.0262774671694188
+"282","9","Furniture and furnishings","337","Furniture and related products",46798,"5925","8831","48402","109956","2017",76910,0.608477441164998
+"283","9","Furniture and furnishings","339","Miscellaneous manufacturing",2768,"349","1075","3622","7814","2017",76910,0.0359901183201144
+"284","9","Furniture and furnishings","532RL","Rental and leasing services and lessors of intangible assets",3335,"0","0","0","3335","2017",76910,0.0433623716031725
+"285","9","Furniture and furnishings","Used","Scrap, used and secondhand goods",8916,"3528","3032","1946","17422","2017",76910,0.115927707710311
+"286","91","Life insurance","524","Insurance carriers and related activities",93061,"0","0","0","93061","2017",93061,1
+"287","92","Net household insurance","524","Insurance carriers and related activities",12707,"0","0","0","12707","2017",12707,1
+"288","93","Net health insurance","524","Insurance carriers and related activities",215194,"0","0","0","215194","2017",215194,1
+"289","94","Net motor vehicle and other transportation insurance","524","Insurance carriers and related activities",77603,"0","0","0","77603","2017",77603,1
+"290","97","Telecommunication services","513","Broadcasting and telecommunications",162204,"0","0","0","162204","2017",162422,0.998657817290761
+"291","97","Telecommunication services","532RL","Rental and leasing services and lessors of intangible assets",72,"0","0","0","72","2017",162422,0.000443289702133947
+"292","97","Telecommunication services","561","Administrative and support services",68,"0","0","0","68","2017",162422,0.000418662496459839
+"293","97","Telecommunication services","721","Accommodation",78,"0","0","0","78","2017",162422,0.00048023051064511
+"294","98","Postal and delivery services","487OS","Other transportation and support activities",6456,"0","0","0","6456","2017",14034,0.460025651988029
+"295","98","Postal and delivery services","561","Administrative and support services",797,"0","0","0","797","2017",14034,0.0567906512754738
+"296","98","Postal and delivery services","GFE","Federal government enterprises",6768,"0","0","0","6768","2017",14034,0.482257374946558
+"297","98","Postal and delivery services","Used","Scrap, used and secondhand goods",13,"5","8","3","28","2017",14034,0.00092632178993872
+"298","99","Internet access","513","Broadcasting and telecommunications",79146,"0","0","0","79146","2017",79146,1
