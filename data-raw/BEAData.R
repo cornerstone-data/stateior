@@ -121,6 +121,8 @@ getBEAStatePCE <- function(year, SAPCE_level = 1) {
     SAPCE_level <- 1
   }
   
+  print(paste0("Using SAPCE level ", SAPCE_level))
+  
   # Create the placeholder file
   StatePCEzip <- file.path(stateio_dir, "SAPCE.zip")
   dir <- file.path(stateio_dir, "SAPCE")
@@ -178,6 +180,8 @@ getBEAStatePCE <- function(year, SAPCE_level = 1) {
                        sep = "_")
     saveRDS(object = df,
             file = paste0(file.path("data", data_name), ".rds"))
+    
+    print(paste0("Saving rds to ", paste0(file.path("data", data_name), ".rds")))
     # Write metadata to JSON
     useeior:::writeMetadatatoJSON(package = "stateior",
                                   name = data_name,
@@ -192,7 +196,7 @@ getBEAStatePCE <- function(year, SAPCE_level = 1) {
   }
 }
 # Download, save and document BEA state PCE from 2010 to the latest year available.
-getBEAStatePCE(year)
+getBEAStatePCE(year, SAPCE_level)
 
 #' Get BEA state foreign travel and expenditures by U.S. residents and
 #' expenditures in the U.S. by nonresidents data from 2010 to the latest year
