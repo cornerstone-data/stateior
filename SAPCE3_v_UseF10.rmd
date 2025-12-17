@@ -1,0 +1,170 @@
+---
+title: "State PCE (SAPCE 3) vs PRO Summary Use table F01 column comparison"
+author: "JV"
+date: "2025-12-17"
+output: html_document
+---
+
+#1. Get State PCE data (SAPCE 3)
+
+```{r}
+
+rm(list = ls()) # Clear environment
+devtools::load_all(".") 
+devtools::load_all("../useeior/") 
+
+stateior_path <- getwd()
+script_path <- "data-raw"
+SAPCE_level <- 3
+year <- 2017
+
+# Load State PCE from source data file and save to /data/ folder
+source(file.path(stateior_path, script_path, "BEAData.R"))
+
+# Read PCE data from /data/ folder and confirm we are using SAPCE 3 data (more detailed line items)
+State_PCE <- readRDS("data/State_PCE_2017_0.4.0.rds")
+if(length(unique(State_PCE$LineCode)) ==  24){
+  print("Using SAPCE 1")
+}else if(length(unique(State_PCE$LineCode)) == 113){
+  print("Using SAPCE 3")
+}else{
+  print("Using unknown SAPCE level")
+}
+
+US_PCE <- State_PCE[State_PCE$GeoName=="United States",]
+
+```
+
+
+#2. Get Use table before redefinitions as used in the state models
+```{r}
+
+# Define relevant spec
+specs <- list()
+specs$BaseIOSchema <- 2017
+specs$model_ver <- '0.4.0' 
+
+# Get relevant national Use table
+U <- getNationalUse(iolevel = "Summary", year = year, specs = specs)
+
+# Isolate final demand column (PCE) as its own df
+U_F10 <- U[,colnames(U)=="F010", drop = FALSE]
+U_F10 <- cbind(rownames(U_F10), U_F10)
+colnames(U_F10) <- c("CommodityCode","U_Prod_F10")
+U_F10$U_Prod_F10 <- U_F10$U_Prod_F10/1e6 # to align with unit from pce brigde
+
+
+```
+
+
+#3. Get PCE Summary Bridge File and sort by commodity and producer value to compare with Use table F10 values
+```{r}
+
+year <- 2017 
+
+# Download BEA Summary PCE bridge table
+bridge_file <- "inst/extdata/PCEBridge_Summary.xlsx"
+if(!file.exists(bridge_file)) {
+  download.file("https://apps.bea.gov/industry/release/xlsx/PCEBridge_Summary.xlsx",
+                bridge_file, mode = "wb")
+}
+# Note that the first column is actually called NIPA Line but it is called here LineCode to match with 
+# the State_PCE column name
+
+column_names <- c("LineCode", "PCECategory", "CommodityCode", "CommodityDescription",
+                  "ProducersValue", "Transportation Costs", "Wholesale", "Retail", "PurchasersValue","Year")
+
+PCEBridge_Summary <- read_excel(bridge_file, as.character(year))
+
+# Remove the first 4 columns as they do not contain relevant data
+PCEBridge_Summary <- PCEBridge_Summary[-(1:4),]
+colnames(PCEBridge_Summary) <- column_names
+
+# Sort and find ratios by Commodity Code
+PCEBridge_Summary_byCom <- PCEBridge_Summary[order(PCEBridge_Summary$CommodityCode),]
+
+# Find sum of ProducersValue and PurchasersValue by Commodity
+# First convert to numeric
+PCEBridge_Summary_byCom$ProducersValue <- as.numeric(PCEBridge_Summary_byCom$ProducersValue)
+PCEBridge_Summary_byCom[which(is.na(PCEBridge_Summary_byCom$ProducersValue))] <- 0 # replace possbile NAs from character conversion with 0s
+
+# Find producer and purchaser sums by commodity
+CommodityCodeProdSum <- aggregate(ProducersValue ~ CommodityCode, data = PCEBridge_Summary_byCom, sum)
+colnames(CommodityCodeProdSum) <- c("CommodityCode","ProducersValuebyCommodityCode")
+
+# Add Sums as columns and then find the allocation by dividing each row
+PCEBridge_Summary_byCom <- merge(PCEBridge_Summary_byCom, CommodityCodeProdSum)
+
+LineToComCodeMapping <- PCEBridge_Summary_byCom[,c(1,3)]
+
+
+```
+
+
+#4. Compare Summary Bridge PCE producer value by commodity vs. col F10 from US Use table 
+```{r}
+# Add final demand values from Use to line code mapping
+
+bridge_v_F10 <- merge(LineToComCodeMapping, U_F10)
+bridge_v_F10 <- merge(bridge_v_F10, PCEBridge_Summary_byCom, by = "CommodityCode" )
+# Keep a set of rows where the combintion of commodity code, F10, and ProducersValueByCommodityCode form a unique set
+bridge_v_F10 <- unique(bridge_v_F10[c('CommodityCode', 'U_Prod_F10', 'ProducersValuebyCommodityCode')])
+bridge_v_F10$U_F10_to_Bridge_Ratio <- bridge_v_F10$U_Prod_F10/bridge_v_F10$ProducersValuebyCommodityCode
+
+outliers_index <- which(abs(bridge_v_F10$U_F10_to_Bridge_Ratio)>1.001 | abs(bridge_v_F10$U_F10_to_Bridge_Ratio) < 0.999)
+print("The table below shows any CommodityCodes for which the Summary Bridge data and Use table F10 column have different totals")
+print(bridge_v_F10[outliers_index,])
+
+
+```
+
+
+
+#5. Sort PCE Bridge by line and purchaser value to compare with SAPCE3 values
+```{r}
+
+
+# Sort and find ratios by PCE Line Code
+PCEBridge_Summary_byLine <- PCEBridge_Summary[order(PCEBridge_Summary$LineCode),]
+
+# Find sum of Purchasers by Line Code
+# First convert to numeric
+PCEBridge_Summary_byLine$PurchasersValue <- as.numeric(PCEBridge_Summary_byLine$PurchasersValue)
+PCEBridge_Summary_byLine[which(is.na(PCEBridge_Summary_byLine$PurchasersValue))] <- 0 # replace possbile NAs from character conversion with 0s
+
+LineCodeSum <- aggregate(PurchasersValue ~ LineCode, data = PCEBridge_Summary_byLine, sum)
+colnames(LineCodeSum) <- c("LineCode","PurchasersValuebyLineCodeSum")
+
+# Add ProducersValuebyLineCodeSum as a column and then find the allocation by dividing each row
+PCEBridge_Summary_byLine <- merge(PCEBridge_Summary_byLine, LineCodeSum, by = "LineCode")
+
+#PCEBridge_Summary_byLine$Mapping_ratio <- PCEBridge_Summary_byLine$ProducersValue/PCEBridge_Summary_byLine$ProducersValuebyLineCodeSum
+
+```
+
+
+#6. Compare Summary Bridge Purchaser values vs SAPCE 3 values by line code
+```{r}
+
+# Divide SAPCE 3 data by 1e6 to keep units consistent
+US_PCE$`2017` <- US_PCE$`2017`/1e6
+
+bridge_v_SAPCE3 <- merge(PCEBridge_Summary_byLine, US_PCE, by = "LineCode")
+# Keep relevant columns for comparison
+bridge_v_SAPCE3 <- bridge_v_SAPCE3[,c("LineCode","PurchasersValuebyLineCodeSum","2017")]
+# Get rid of repeat rows
+bridge_v_SAPCE3 <- unique(bridge_v_SAPCE3[,c(1,2,3)])
+
+colnames(bridge_v_SAPCE3) <- c("LineCode","BridgePurValbyLineCodeSum", "US_PCE_PurVal")
+# Reorder to keep the same order as the other comparison, i.e., bridge as the denominator of the ratio
+bridge_v_SAPCE3 <- bridge_v_SAPCE3[,c(1,3,2)]
+
+bridge_v_SAPCE3$US_PCE_to_Bridge_Ratio <- bridge_v_SAPCE3$US_PCE_PurVal/bridge_v_SAPCE3$BridgePurValbyLineCodeSum
+
+
+outliers_index <- which(abs(bridge_v_SAPCE3$US_PCE_to_Bridge_Ratio)>1.001 | abs(bridge_v_SAPCE3$US_PCE_to_Bridge_Ratio) < 0.999)
+print("The table below shows any LineCodes for which the US PCE data and the Summary Bridge data have different totals")
+print(bridge_v_SAPCE3[outliers_index,])
+
+
+```
