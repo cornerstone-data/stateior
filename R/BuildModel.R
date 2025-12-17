@@ -156,6 +156,7 @@ buildStateUseModel <- function(year, specs) {
   # Prepare State Final Demand
   logging::loginfo("Estimating state personal consumption expenditure...")
   State_PCE <- estimateStateHouseholdDemand(year, specs)
+  State_PCE2 <- estimateStateHouseholdDemandUsingPCEBrigde(year, specs)
   logging::loginfo("Estimating state final demand...")
   # Assemble final demand columns and create a temporary State_Import as placeholder
   State_Import <- State_PCE

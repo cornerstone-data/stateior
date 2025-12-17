@@ -392,6 +392,65 @@ estimateStateHouseholdDemand <- function(year, specs) {
   return(State_HouseholdDemand)
 }
 
+
+#' Estimate state household demand at BEA Summary level using the PCE brigde file.
+#' @param year A numeric value specifying the year of interest.
+#' @param specs A list of model specs including 'BaseIOSchema'
+#' @return A data frame contains state household demand for all states at a specific year at BEA Summary level.
+estimateStateHouseholdDemandUsingPCEBrigde <- function(year, specs) {
+  
+  temp <- 1
+
+  State_PCE <- estimateStateHouseholdDemand(year, specs) # for reference
+  
+  # 1. Get PCE bridge
+  library(readxl)
+  bridge_file <- "inst/extdata/PCEBridge_Summary.xlsx"
+  if(!file.exists(bridge_file)) {
+    download.file("https://apps.bea.gov/industry/release/xlsx/PCEBridge_Summary.xlsx",
+                  bridge_file, mode = "wb")
+  }
+  
+  
+  column_names <- c("LineCode", "PCECategory", "CommodityCode", "CommodityDescription",
+                    "ProducersValue", "Transportation Costs", "Wholesale", "Retail", "PurchasersValue","Year")
+  
+  PCEBridge_Summary <- read_excel(bridge_file, as.character(year))
+  
+  # Remove the first 4 columns as they do not contain relevant data
+  PCEBridge_Summary <- PCEBridge_Summary[-(1:4),]
+  colnames(PCEBridge_Summary) <- column_names
+  
+  # Sort and find ratios by PCE Line Code
+  PCEBridge_Summary <- PCEBridge_Summary[order(PCEBridge_Summary$LineCode),]
+  
+  # Find sum of ProducersValue by Line Code
+  # First convert producersValue to numeric
+  PCEBridge_Summary$ProducersValue <- as.numeric(PCEBridge_Summary$ProducersValue)
+  PCEBridge_Summary[which(is.na(PCEBridge_Summary$ProducersValue))] <- 0 # replace possbile NAs from character conversion with 0s
+  
+  LineCodeSum <- aggregate(ProducersValue ~ LineCode, data = PCEBridge_Summary, sum)
+  colnames(LineCodeSum) <- c("LineCode","ProducersValuebyLineCodeSum")
+  
+  # Add ProducersValuebyLineCodeSum as a column and then find the allocation by dividing each row
+  PCEBridge_Summary <- merge(PCEBridge_Summary, LineCodeSum, by = "LineCode")
+  PCEBridge_Summary$Mapping_ratio <- PCEBridge_Summary$ProducersValue/PCEBridge_Summary$ProducersValuebyLineCodeSum
+  
+  # 2. Get state PCE
+  PCE <- getStatePCE(year, specs)
+  
+  State_HouseholdDemand <- data.frame()
+  for (state in unique(PCE$GeoName)) {
+    
+    HouseholdDemand <- merge(PCEBridge_Summary, PCE[PCE$GeoName == state,], by = "LineCode")
+    temp <- 2
+    
+  }
+  
+  temp <- 3
+    
+}
+
 #' Estimate state private investment at BEA Summary level.
 #' Apply state PCE ratio to F02R.
 #' Apply state Gross Output ratio to F02S, F02E, F02N, and F030.
