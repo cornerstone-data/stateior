@@ -155,8 +155,10 @@ buildStateUseModel <- function(year, specs) {
   states <- names(State_Use_Intermediate_ls)
   # Prepare State Final Demand
   logging::loginfo("Estimating state personal consumption expenditure...")
-  State_PCE <- estimateStateHouseholdDemand(year, specs)
-  State_PCE2 <- estimateStateHouseholdDemandUsingPCEBrigde(year, specs)
+  State_PCE <- estimateStateHouseholdDemand(year, specs, SAPCE_level = 1)
+  # For comparison
+  # TODO once finished: Remove second call, remove SAPCE_level from args, and leave SAPCE_level = 3 call as default 
+  State_PCE2 <- estimateStateHouseholdDemand(year, specs, SAPCE_level = 3)
   logging::loginfo("Estimating state final demand...")
   # Assemble final demand columns and create a temporary State_Import as placeholder
   State_Import <- State_PCE
@@ -164,11 +166,19 @@ buildStateUseModel <- function(year, specs) {
   State_Import[, import_col] <- 0
   row_names <- rownames(State_PCE)
   StateFinalDemand <- cbind(State_PCE,
-                            estimateStatePrivateInvestment(year, specs)[row_names, ],
+                            estimateStatePrivateInvestment(year, specs, SAPCE_level = 1)[row_names, ],
                             estimateStateExport(year, specs)[row_names, , drop = FALSE],
                             State_Import[row_names, , drop = FALSE],
                             estimateStateFedGovExpenditure(year,specs)[row_names, ],
                             estimateStateSLGovExpenditure(year,specs)[row_names, ])
+  
+  StateFinalDemand2 <- cbind(State_PCE,
+                            estimateStatePrivateInvestment(year, specs, SAPCE_level = 3)[row_names, ],
+                            estimateStateExport(year, specs)[row_names, , drop = FALSE],
+                            State_Import[row_names, , drop = FALSE],
+                            estimateStateFedGovExpenditure(year,specs)[row_names, ],
+                            estimateStateSLGovExpenditure(year,specs)[row_names, ])
+  
   StateFinalDemand$State <- gsub("\\..*", "", rownames(StateFinalDemand))
   StateFinalDemand$Commodity <- gsub(".*\\.", "", rownames(StateFinalDemand))
   

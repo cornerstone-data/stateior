@@ -291,6 +291,7 @@ assembleStateSummaryGrossValueAdded <- function(year, specs) {
 #' @param year A numeric value specifying the year of interest.
 #' @return A data frame contains ratios of statetotal PCE for all states at a specific year at BEA Summary level.
 calculateStateTotalPCE <- function(year) {
+  # TODO: Remove this function? It does not seem to be used anywhere
   # Load state and US PCE
   PCE <- getStatePCE(year)
   # Extract state total PCE
@@ -308,13 +309,26 @@ calculateStateTotalPCE <- function(year) {
 #' Calculate state-US PCE (personal consumption expenditures) ratios at BEA Summary level.
 #' @param year A numeric value specifying the year of interest.
 #' @param specs A list of model specs including 'BaseIOSchema'
+#' @param SAPCE_level An integer that denotes the level of detail for State PCE mapping (1 more aggregate, 3 more detailed)
 #' @return A data frame contains ratios of state/US PCE for all states at a specific year at BEA Summary level.
-calculateStateUSPCERatio <- function(year, specs) {
+calculateStateUSPCERatio <- function(year, specs, SAPCE_level = 1) {
   # Define BEA_col and year_col
   schema <- specs$BaseIOSchema
   BEA_col <- paste0("BEA_", schema, "_Summary_Code")
-  # Load state and US PCE
-  PCE <- getStatePCE(year, specs)
+  # # Load state and US PCE 
+  # PCE <- getStatePCE(year, specs) #original code
+  
+  if(SAPCE_level == 1){
+    PCE <- getStatePCE(year, specs)
+    print("Calculating USPCE ratio with SAPCE level 1")
+  }else if(SAPCE_level == 3){
+    PCE <- readRDS("data/State_PCE_2017_0.4.0.rds")
+    PCE <- PCE[, c("GeoName", "LineCode", as.character(year))] # Needed to remove the Descriptions column which is missing when using the getStatePCE function
+    print("Calculating USPCE ratio with SAPCE level 3")
+  }else{
+    stop("Incorrect SAPCE level used as input")
+  }
+  
   # Extract State PCE
   StatePCE <- PCE[PCE$GeoName != "United States", ]
   # Generate sum of state PCE
@@ -332,11 +346,51 @@ calculateStateUSPCERatio <- function(year, specs) {
   StateUSPCE <- merge(StatePCE, USPCE, by = "LineCode")
   # Calculate the state-US PCE ratios by LineCode
   StateUSPCE$Ratio <- StateUSPCE[, paste0(year, ".x")]/StateUSPCE[, paste0(year, ".y")]
-  # Map to BEA Summary
-  filename <- paste0("Crosswalk_StatePCEtoBEASummaryIO", schema, "Schema.csv")
-  StatePCEtoBEASummary <- readCSV(system.file("extdata", filename, package = "stateior"))
+  
+  # # Map to BEA Summary # Original code
+  # filename <- paste0("Crosswalk_StatePCEtoBEASummaryIO", schema, "Schema.csv")
+  # StatePCEtoBEASummary <- readCSV(system.file("extdata", filename, package = "stateior"))
+  # StateUSPCE <- merge(StatePCEtoBEASummary[!StatePCEtoBEASummary[[paste0("BEA_", schema, "_Summary_Code")]] == "", ],
+  #                     StateUSPCE, by.x = "Line", by.y = "LineCode")
+  
+  if(SAPCE_level == 1){
+    # Map to BEA Summary # Original code
+    filename <- paste0("Crosswalk_StatePCEtoBEASummaryIO", schema, "Schema.csv")
+    StatePCEtoBEASummary <- readCSV(system.file("extdata", filename, package = "stateior"))
+
+  }else if(SAPCE_level == 3){
+    
+    library(readxl)
+    bridge_file <- "inst/extdata/PCEBridge_Summary.xlsx"
+    if(!file.exists(bridge_file)) {
+      download.file("https://apps.bea.gov/industry/release/xlsx/PCEBridge_Summary.xlsx",
+                    bridge_file, mode = "wb")
+    }
+    StatePCEtoBEASummary <- read_excel(bridge_file, as.character(year))
+    # Remove the first 4 columns as they do not contain relevant data
+    StatePCEtoBEASummary <- StatePCEtoBEASummary[-(1:4),]
+    # Keep the first 4 columns which are the relevant ones for mapping
+    StatePCEtoBEASummary <- StatePCEtoBEASummary[,1:4]
+    # Reorder so as to match the original ordering from the SAPCE 1 mapping file
+    StatePCEtoBEASummary <- StatePCEtoBEASummary[,c(3,4,1,2)]
+    
+    column_names <- c(paste0("BEA_",as.character(year),"_Summary_Code"), 
+                      paste0("BEA_",as.character(year),"_Summary_Name"),
+                      "Line",
+                      "Description")
+    
+    colnames(StatePCEtoBEASummary) <- column_names
+    # Order by commodity. Everything inside order is equivalent to DF$ColName but this way we can access the name dynamically
+    StatePCEtoBEASummary <- StatePCEtoBEASummary[order(as.character(unlist(StatePCEtoBEASummary[,1]))),]
+    
+  }else{
+    stop("Incorrect SAPCE level used as input.")
+  }
+  
   StateUSPCE <- merge(StatePCEtoBEASummary[!StatePCEtoBEASummary[[paste0("BEA_", schema, "_Summary_Code")]] == "", ],
                       StateUSPCE, by.x = "Line", by.y = "LineCode")
+  
+  
   # Adjust Ratio based on state PCE
   for (state in unique(StateUSPCE$GeoName)) {
     for (sector in unique(StateUSPCE[[paste0("BEA_", schema, "_Summary_Code")]])) {
@@ -359,8 +413,9 @@ calculateStateUSPCERatio <- function(year, specs) {
 #' Estimate state household demand at BEA Summary level.
 #' @param year A numeric value specifying the year of interest.
 #' @param specs A list of model specs including 'BaseIOSchema'
+#' @param SAPCE_level An integer that denotes the level of detail for State PCE mapping (1 more aggregate, 3 more detailed)
 #' @return A data frame contains state household demand for all states at a specific year at BEA Summary level.
-estimateStateHouseholdDemand <- function(year, specs) {
+estimateStateHouseholdDemand <- function(year, specs, SAPCE_level = 1) {
   # Define BEA_col and year_col
   schema <- specs$BaseIOSchema
   BEA_col <- paste0("BEA_", schema, "_Summary_Code")
@@ -370,7 +425,7 @@ estimateStateHouseholdDemand <- function(year, specs) {
   US_HouseholdDemand <- US_Summary_Use[getVectorOfCodes("Summary", "Commodity", specs),
                                        getVectorOfCodes("Summary", "HouseholdDemand", specs), drop = FALSE]
   # Generate State_PCE_ratio
-  PCE_ratio <- calculateStateUSPCERatio(year, specs)
+  PCE_ratio <- calculateStateUSPCERatio(year, specs, SAPCE_level)
   # Calculate State_HouseholdDemand
   State_HouseholdDemand <- data.frame()
   for (state in unique(PCE_ratio$State)) {
@@ -392,72 +447,14 @@ estimateStateHouseholdDemand <- function(year, specs) {
   return(State_HouseholdDemand)
 }
 
-
-#' Estimate state household demand at BEA Summary level using the PCE brigde file.
-#' @param year A numeric value specifying the year of interest.
-#' @param specs A list of model specs including 'BaseIOSchema'
-#' @return A data frame contains state household demand for all states at a specific year at BEA Summary level.
-estimateStateHouseholdDemandUsingPCEBrigde <- function(year, specs) {
-  
-  temp <- 1
-
-  State_PCE <- estimateStateHouseholdDemand(year, specs) # for reference
-  
-  # 1. Get PCE bridge
-  library(readxl)
-  bridge_file <- "inst/extdata/PCEBridge_Summary.xlsx"
-  if(!file.exists(bridge_file)) {
-    download.file("https://apps.bea.gov/industry/release/xlsx/PCEBridge_Summary.xlsx",
-                  bridge_file, mode = "wb")
-  }
-  
-  
-  column_names <- c("LineCode", "PCECategory", "CommodityCode", "CommodityDescription",
-                    "ProducersValue", "Transportation Costs", "Wholesale", "Retail", "PurchasersValue","Year")
-  
-  PCEBridge_Summary <- read_excel(bridge_file, as.character(year))
-  
-  # Remove the first 4 columns as they do not contain relevant data
-  PCEBridge_Summary <- PCEBridge_Summary[-(1:4),]
-  colnames(PCEBridge_Summary) <- column_names
-  
-  # Sort and find ratios by PCE Line Code
-  PCEBridge_Summary <- PCEBridge_Summary[order(PCEBridge_Summary$LineCode),]
-  
-  # Find sum of ProducersValue by Line Code
-  # First convert producersValue to numeric
-  PCEBridge_Summary$ProducersValue <- as.numeric(PCEBridge_Summary$ProducersValue)
-  PCEBridge_Summary[which(is.na(PCEBridge_Summary$ProducersValue))] <- 0 # replace possbile NAs from character conversion with 0s
-  
-  LineCodeSum <- aggregate(ProducersValue ~ LineCode, data = PCEBridge_Summary, sum)
-  colnames(LineCodeSum) <- c("LineCode","ProducersValuebyLineCodeSum")
-  
-  # Add ProducersValuebyLineCodeSum as a column and then find the allocation by dividing each row
-  PCEBridge_Summary <- merge(PCEBridge_Summary, LineCodeSum, by = "LineCode")
-  PCEBridge_Summary$Mapping_ratio <- PCEBridge_Summary$ProducersValue/PCEBridge_Summary$ProducersValuebyLineCodeSum
-  
-  # 2. Get state PCE
-  PCE <- getStatePCE(year, specs)
-  
-  State_HouseholdDemand <- data.frame()
-  for (state in unique(PCE$GeoName)) {
-    
-    HouseholdDemand <- merge(PCEBridge_Summary, PCE[PCE$GeoName == state,], by = "LineCode")
-    temp <- 2
-    
-  }
-  
-  temp <- 3
-    
-}
-
 #' Estimate state private investment at BEA Summary level.
 #' Apply state PCE ratio to F02R.
 #' Apply state Gross Output ratio to F02S, F02E, F02N, and F030.
 #' @param year A numeric value specifying the year of interest.
 #' @param specs A list of model specs including 'BaseIOSchema'
+#' @param SAPCE_level An integer that denotes the level of detail for State PCE mapping (1 more aggregate, 3 more detailed)
 #' @return A data frame contains state household demand for all states at a specific year at BEA Summary level.
-estimateStatePrivateInvestment <- function(year, specs) {
+estimateStatePrivateInvestment <- function(year, specs, SAPCE_level = 1) {
   # Define BEA_col and year_col
   schema <- specs$BaseIOSchema
   BEA_col <- paste0("BEA_", schema, "_Summary_Code")
@@ -471,7 +468,7 @@ estimateStatePrivateInvestment <- function(year, specs) {
                                                       colnames(US_PrivateInvestment) != "F02R"]
   # Apply state PCE ratio to F02R.
   # Generate state PCE ratio
-  PCE_ratio <- calculateStateUSPCERatio(year, specs)
+  PCE_ratio <- calculateStateUSPCERatio(year, specs, SAPCE_level)
   # Apply state Commodity Output ratio to F02S, F02E, F02N, and F030
   # Generate state Commodity Output ratio
   CommOutput_ratio <- calculateStateCommodityOutputRatio(year, specs)
