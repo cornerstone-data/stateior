@@ -138,9 +138,10 @@ buildStateSupplyModel <- function(year, specs) {
 #' (including DC and Overseas) for a given year.
 #' @param year A numeric value specifying the year of interest.
 #' @param specs A list of model specs including 'BaseIOSchema'
+#' @param SAPCE_level An integer that denotes the level of detail for State PCE mapping (1 more aggregate, 3 more detailed)
 #' @return A list of state Use table, Domestic Use table and industry output.
 #' @export
-buildStateUseModel <- function(year, specs) {
+buildStateUseModel <- function(year, specs, SAPCE_level = 1) {
   startLogging()
   # Define industries, commodities, final demand columns, import column, and
   # non-import columns
@@ -157,8 +158,8 @@ buildStateUseModel <- function(year, specs) {
   logging::loginfo("Estimating state personal consumption expenditure...")
   State_PCE <- estimateStateHouseholdDemand(year, specs, SAPCE_level = 1)
   # For comparison
-  # TODO once finished: Remove second call, remove SAPCE_level from args, and leave SAPCE_level = 3 call as default 
-  State_PCE2 <- estimateStateHouseholdDemand(year, specs, SAPCE_level = 3)
+  # # TODO once finished: Remove second call, remove SAPCE_level from args, and leave SAPCE_level = 3 call as default 
+  # State_PCE2 <- estimateStateHouseholdDemand(year, specs, SAPCE_level = 3)
   logging::loginfo("Estimating state final demand...")
   # Assemble final demand columns and create a temporary State_Import as placeholder
   State_Import <- State_PCE
@@ -172,12 +173,12 @@ buildStateUseModel <- function(year, specs) {
                             estimateStateFedGovExpenditure(year,specs)[row_names, ],
                             estimateStateSLGovExpenditure(year,specs)[row_names, ])
   
-  StateFinalDemand2 <- cbind(State_PCE,
-                            estimateStatePrivateInvestment(year, specs, SAPCE_level = 3)[row_names, ],
-                            estimateStateExport(year, specs)[row_names, , drop = FALSE],
-                            State_Import[row_names, , drop = FALSE],
-                            estimateStateFedGovExpenditure(year,specs)[row_names, ],
-                            estimateStateSLGovExpenditure(year,specs)[row_names, ])
+  # StateFinalDemand2 <- cbind(State_PCE,
+  #                           estimateStatePrivateInvestment(year, specs, SAPCE_level = 3)[row_names, ],
+  #                           estimateStateExport(year, specs)[row_names, , drop = FALSE],
+  #                           State_Import[row_names, , drop = FALSE],
+  #                           estimateStateFedGovExpenditure(year,specs)[row_names, ],
+  #                           estimateStateSLGovExpenditure(year,specs)[row_names, ])
   
   StateFinalDemand$State <- gsub("\\..*", "", rownames(StateFinalDemand))
   StateFinalDemand$Commodity <- gsub(".*\\.", "", rownames(StateFinalDemand))

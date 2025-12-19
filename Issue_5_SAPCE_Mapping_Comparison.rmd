@@ -1,0 +1,161 @@
+---
+title: "Cornerstone-data/stateior issue 5 - SAPCE mapping comparison"
+author: "JV"
+date: "2025-12-04"
+output: html_document
+---
+# This script is for informing issue 5: https://github.com/cornerstone-data/stateior/issues/5
+
+#1 Build stateior model - using steps from https://github.com/USEPA/stateior/wiki/Model-Approach
+
+#1.1 -  Obtain raw data. Can skip if objects are in local \AppData\Local\stateio folder
+```{r Step 1 RAW data}
+
+rm(list = ls()) # Clear environment
+devtools::load_all(".") # reload for debugging purposes
+devtools::load_all("../useeior/") # # reload for debugging purposes
+
+stateior_path <- getwd()
+script_path <- "data-raw"
+SAPCE_level <- 3
+year <- 2017
+
+# Model approach step 1 scripts listed below but commented out as we don't need to run all of them, only the first one
+# To update SAPCE mapping file
+source(file.path(stateior_path, script_path, "BEAData.R"))
+#source(file.path(stateior_path, script_path, "CensusData.R")) # works but not needed for this test
+#source(file.path(stateior_path, script_path, "EIAData.R")) # works but not needed for this test
+
+# Line below not working from console as of latest attempt on 2025-12-15. HTTP status was '403 Forbidden'
+#source(file.path(stateior_path, script_path, "FAFData.R")) 
+
+# Line below not working from console as of latest attempt on 2025-12-15. HTTP status was '404 Not Found'
+#source(file.path(stateior_path, script_path, "USASpendingData.R")) 
+
+# NEED BEA API KEY For the one below
+# source(file.path(stateior_path, script_path, "BEAData_wAPI.R "))
+
+# Check which SAPCE file we are using
+
+#NOTE THAT THIS PATH WILL NEED TO CHANGE TO YOUR LOCAL AppData/Local/stateio path
+AppData_State_PCE <- readRDS("C:\\Users/jvend/AppData/Local/stateio/State_PCE_2017_0.4.0.rds")
+Local_folder_State_PCE <- readRDS("data/State_PCE_2017_0.4.0.rds")
+
+# Check for AppData version
+if(length(unique(AppData_State_PCE$LineCode)) ==  24){
+  print("AppData_State_PCE using SAPCE 1")
+}else if(length(unique(AppData_State_PCE$LineCode)) == 113){
+  print("AppData_State_PCE using SAPCE 3")
+}else{
+  print("AppData_State_PCE using unknown SAPCE level")
+}
+
+
+# Check for local folder version
+if(length(unique(Local_folder_State_PCE$LineCode)) ==  24){
+  print("Local_folder_State_PCE using SAPCE 1")
+}else if(length(unique(Local_folder_State_PCE$LineCode)) == 113){
+  print("Local_folder_State_PCE using SAPCE 3")
+}else{
+  print("Local_folder_State_PCE using unknown SAPCE level")
+}
+
+```
+
+
+#1.2 -  Build State Supply model
+```{r Step 2 State Supply model}
+
+source(file.path(stateior_path, script_path, "StateSupplyModel.R"))
+
+# Tested with both SAPCE 1 and SPACE 3 files in AppData/Local/stateio, runs to completion
+
+```
+
+
+#1.3 -  Build State Use  model (test that it runs to completion with the changes to the underlying functions)
+```{r Step 3 State Use model}
+# Here is where the changes to the mapping will be used, in the following chunk
+# https://github.com/cornerstone-data/stateior/blob/master/R/StateUseFunctions.R#L337-L349
+
+
+# Currently:
+# State_PCE with SAPCE 1 lives in "C:\\Users/jvend/AppData/Local/stateio/State_PCE_2017_0.4.0.rds"
+# State_PCE with SAPCE 3 lives in "data/State_PCE_2017_0.4.0.rds"
+# They are both called from buildStateUseModel() by changing the SAPCE_level parameter for the specific function calls.
+
+# TODO: 1) Test the difference between SAPCE 1 and SAPCE 3 mapping by doing 2 runs and commenting out the lines that call 
+# SAPCE 3 in the first run, and then commenting out the lines that call SAPCE 1 in the second run.
+# TODO: 2) Compare Output of State_PCE <- estimateStateHouseholdDemand(year, specs, SAPCE_level = 1) vs 
+#                            State_PCE <- estimateStateHouseholdDemand(year, specs, SAPCE_level = 3) and same with
+#                            StateFinalDemand call in line 168 of BuildModel.R
+# TODO: 3) Compare resulting StateUseModel objects resulting from the below source call with both sapce 1 and 3
+# TODO: 4) After tests indicate that the SAPCE 3 mapping is working, need to 
+  # A) make sure State_PCE with SAPCE 3 lives is /local/stateio/,  
+  # B) remove State_PCE with SAPCE 1 from that folder, and
+  # C) create State_PCE for 2012-2023 with SAPCE 3 and store in that folder
+
+source(file.path(stateior_path, script_path, "StateUseModel.R"))
+
+
+# As of 2025-12-15, the three model build steps above work when using SAPCE 1 mapping
+
+```
+
+
+
+#2. Compare State Use Models (and components) built using both SAPCE 1 and 3 mappings
+```{r}
+
+specs <- {}
+specs$BaseIOSchema <- 2017
+specs$model_ver <- "0.4.0"
+SAPCE_list <- c(1,3)
+
+StateUseModel_ls <- list()
+State_PCE_ls <- list()
+StateFD_ls <- list()
+for(SAPCE_level in SAPCE_list){
+  print(paste0("SAPCE_level",as.character(SAPCE_level)))
+  
+  StateUseModel_ls[[paste0("SAPCE_level",as.character(SAPCE_level))]] <- buildStateUseModel(year, specs, SAPCE_level)
+  
+  State_PCE <- estimateStateHouseholdDemand(year, specs, SAPCE_level)
+  
+  State_PCE_ls[[paste0("SAPCE_level",as.character(SAPCE_level))]] <- State_PCE
+  
+  # Assemble final demand columns and create a temporary State_Import as placeholder
+  import_col <- getVectorOfCodes("Summary", "Import", specs)
+  State_Import <- State_PCE
+  colnames(State_Import) <- import_col
+  State_Import[, import_col] <- 0
+  row_names <- rownames(State_PCE)
+  StateFD_ls[[paste0("SAPCE_level",as.character(SAPCE_level))]] <- cbind(State_PCE,
+                          estimateStatePrivateInvestment(year, specs, SAPCE_level)[row_names, ],
+                          estimateStateExport(year, specs)[row_names, , drop = FALSE],
+                          State_Import[row_names, , drop = FALSE],
+                          estimateStateFedGovExpenditure(year,specs)[row_names, ],
+                          estimateStateSLGovExpenditure(year,specs)[row_names, ])
+  
+  
+}
+
+for(st in state.name){
+  
+  state_indexes <- which(grepl(st,rownames(State_PCE_ls$SAPCE_level1)))
+  SAPCE1_F10 <- State_PCE_ls$SAPCE_level1[state_indexes,]/1e6 #to reduce axis values when mapping
+  SAPCE3_F10 <- State_PCE_ls$SAPCE_level3[state_indexes,]/1e6
+  
+  png(paste0(st,"_F10_comparison_using_SAPCE1v3_plot.png"), width=800, height=800)
+  title <- paste0(st,"F10 values using SAPCE 1 vs SAPCE3 mapping. $M")
+  
+  p <- plot(as.vector(SAPCE1_F10), as.vector(SAPCE3_F10),
+     xlab="SAPCE1_F10", ylab="SAPCE3_F10", main=title)
+  abline(0, 1, col="grey")
+
+
+  
+}
+
+  dev.off()
+```
