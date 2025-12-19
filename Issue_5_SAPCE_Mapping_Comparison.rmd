@@ -147,7 +147,7 @@ for(st in state.name){
   SAPCE3_F10 <- State_PCE_ls$SAPCE_level3[state_indexes,]/1e6
   
   png(paste0(st,"_F10_comparison_using_SAPCE1v3_plot.png"), width=800, height=800)
-  title <- paste0(st,"F10 values using SAPCE 1 vs SAPCE3 mapping. $M")
+  title <- paste0(st," F10 values using SAPCE 1 vs SAPCE3 mapping. $M")
   
   p <- plot(as.vector(SAPCE1_F10), as.vector(SAPCE3_F10),
      xlab="SAPCE1_F10", ylab="SAPCE3_F10", main=title)
